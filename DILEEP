@@ -90,6 +90,54 @@ Here are 10 highly technical, developer-centric questions to ask your Team Lead.
 
 *"For the compliance check using `IS_AND_OTHER_NON_TAX_ADV_BAL_AM`: Is this field guaranteed to be non-null in the CDW file? If it is null, should I treat it as `$0` (force the tag 8063) or assume they are fully compliant? I need to know the default safe behavior for null handling here to avoid logic errors."*
 
+
+
+******************
+
+Since your Team Lead (TL) has assigned this as a study task, they aren't just looking for a summary—they want to see if you can spot **gaps, risks, and technical dependencies.**
+
+To impress your TL, you should ask questions that show you've thought about **how this will actually be built** and **what could go wrong** during the transition.
+
+Here are 4 categories of questions and doubts to raise:
+
+### 1. Questions on Data Risks (The "What Ifs")
+
+These questions show you are thinking about data integrity during the big transition.
+
+* **The "Account Linkage" Doubt:** *"The document says accounts should follow the highest tier of any HH they are associated with. If an account is unlinked from a high-tier HH, does the system automatically re-evaluate it against the remaining HHs in that same daily run, or is there a risk it temporarily keeps the higher status?"*
+* **The "AS UHNW" Cleanup:** *"For the mass enrollment cleanup, if a client qualifies for both Retail SPWS and AS UHNW, but we move them to AS UHNW because their assets are mostly Advisory—will they lose any retail-specific perks they previously enjoyed?"*
+
+### 2. Questions on Technical Implementation (The "How")
+
+These show you are looking at the technical architecture and the shift to "Batch" processing.
+
+* **The "Daily Batch" Latency:** *"Since we are moving from real-time to daily batch processing because the CAT Segmentation View isn't real-time, how should we handle customer service inquiries for 'instant' upgrades? Is there a plan to manage customer expectations for that 24-hour delay?"*
+* **The "One-Shot" Update:** *"The logic states we should avoid multiple enrollment changes in a single job run (e.g., jumping PREF → GOLD → PLAT). In the code, should we implement a 'pre-calculation' step that determines the final target tier before any database writes occur?"*
+
+### 3. Questions on Dependencies (The "Blockers")
+
+These show you understand the project timeline and what is standing in the way of success.
+
+* **The "NCHH" Split Blocker:** *"It mentions we are dependent on the 'NCHH splits' reaching a steady state. Do we have a target date for that? I’m concerned that if the household structures are still shifting, our automated tiering might trigger incorrect 'uptiers' or 'downtiers' during the split process."*
+* **The "Salesforce" Transition:** *"Since OMT guides are being drawn down in favor of Salesforce for exceptions, what is the 'Plan B' if a high-value customer needs an immediate manual tier override before the Salesforce integration is fully live?"*
+
+### 4. Doubts on Business Rules (The "Why")
+
+These show you are thinking about the business impact and edge cases.
+
+* **The "Grace Period" Edge Case:** *"For the 'go-forward only' 365-day grace period for PLAT and GOLD: If a customer is already in GOLD today and their balance drops tomorrow, do they get downgraded immediately because they weren't 'newly enrolled' under the new rules?"*
+* **The "Tax Advantaged" Label:** *"Is the 'Tax Advantaged Assets Required' label (ID 8063) purely for internal reporting, or does it change the actual services or products the client can access in the SPWS tier?"*
+
+---
+
+### **Pro-Tip for your meeting:**
+
+Instead of just asking these questions, try framing them like this:
+
+> *"I've spent some time with the enrollment requirements. Most of the logic is clear, but I wanted to clarify a few **technical edge cases**—specifically around how we're handling the **transition from real-time to batch** and the **safety logic for the 'one-shot' account updates**."*
+
+**Would you like me to help you draft a 3-sentence "Summary of Understanding" that you can send to your TL before the meeting?**
+
 ### 10. Audit Logging Standards
 
 *"Since we are automating massive enrollment changes (especially the cleanup of SPWS -> AS UHNW), what are the specific Audit Logging requirements? Do we need to write a separate entry to the `AUDIT_LOG` table for every single downtier event including a specific 'Reason Code' (e.g., 'Downtiered via Batch: AS_UHNW_Cleanup'), or is standard system logging sufficient?"*
