@@ -1,0 +1,95 @@
+Here are 10 smart, high-value questions you can ask your Team Lead. These questions show that you have studied the document deeply and are thinking about **edge cases**, **risks**, and **implementation details**.
+
+### Category 1: Clarifying "Grey Areas" in the Requirements
+
+**1. Regarding the "Cleanup" of SPWS clients (The Unenrollment List):**
+*"The document mentions a one-time cleanup to move 'false' SPWS clients to AS UHNW, but it notes an open question about whether the Business will provide a list or if we need to query them ourselves. Has this been decided yet? If we need to identify them, I’ll need very specific logic on which assets to exclude so we don't accidentally downtier the wrong VIPs."*
+
+**2. The "Sleeping Code" for INTL/VIP (PROD654):**
+*"The Scope Note mentions we need to incorporate logic from `PROD654` (Jira EXPRESS-221598) that is currently in production but 'switched off.' Is that code fully compatible with this new QBC data source, or should I allocate extra time to refactor that 'sleeping' code to work with the new file?"*
+
+**3. "Go-Forward" Grace Periods for Platinum/Gold:**
+*"For the new 365-day grace period on PLAT/GOLD, the doc says 'go-forward only.' I want to clarify the edge case: If an existing Platinum client drops below $250k the day *before* we go live, and then re-qualifies the day *after*, do we treat them as a 'new' entry and lock them in for 365 days immediately?"*
+
+### Category 2: Technical & Architecture Risks
+
+**4. Real-Time vs. Batch Impact:**
+*"We are moving from Real-Time processing to Batch processing because the Segmentation View isn't real-time. Have the downstream teams (like Marketing Emails or Mobile App notifications) been warned that status updates will now be delayed by ~24 hours? I want to make sure we don't get bug reports about 'missing' upgrades that are just waiting for the nightly batch."*
+
+**5. Performance of the "Multiple Rows" Logic:**
+*"The document notes that a single client appears on multiple rows in the file and we need to scan all of them to find a 'Yes'. Given the size of the CDW file, are we concerned about the processing time for this loop? Should I prioritize optimizing that query to ensure we fit within the nightly batch window?"*
+
+**6. Interim vs. Strategic Solution:**
+*"Since we are explicitly building for the 'Interim' QBC solution, how much effort should I put into making the data-ingestion layer modular? Should I architect it so we can easily swap to the 'Strategic' solution later, or should I optimize for speed of delivery now and hard-code for the interim file?"*
+
+### Category 3: Logical Conflicts
+
+**7. SCC "Draw Down" Logic:**
+*"I understand we are ignoring SCC households because the program is ending. However, if an SCC client *falls* below the SCC threshold but still qualifies for SPWS ($10M+), should our logic catch them, or do we strictly ignore them until the SCC tag is fully removed from their account in a year?"*
+
+**8. Sanctuary (SAN) "Race Conditions":**
+*"Since SAN accounts count for *both* Retail and AS eligibility, is there any risk of a race condition where the Advisor enrollment job and our Retail enrollment job try to update the same client record at the same time? Do we need a 'lock' or a specific sequence to ensure we don't overwrite each other?"*
+
+**9. The Maintenance Logic "Spike":**
+*"The document suggests a 'spike' (investigation) is needed to find all the maintenance jobs that use the old logic. Should I prioritize this spike as my very first task? I'm concerned that if we leave it for later, we might find a dependency that forces us to change our core enrollment design."*
+
+**10. "Tax Advantaged" Renaming:**
+*"Regarding the change from 'ERISA' to 'Tax Advantaged' for SPWS compliance—is this purely a label change in the database, or does the underlying logic for *identifying* these assets change? I want to ensure I'm looking at the correct balance field (`IS_AND_OTHER_NON_TAX_ADV_BAL_AM`) and not missing any new asset types."*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Here are 10 highly technical, developer-centric questions to ask your Team Lead. These focus on **data structures, concurrency, exception handling, and system performance**, showing you are ready to start coding.
+
+### 1. Data Ingestion Strategy (Batch vs. Stream)
+
+*"The QBC file from CDW is our source of truth. Since we have to scan multiple rows per client (one-to-many relationship) to find a single 'true' flag, what is the preferred ingestion pattern? Should I ingest the raw file into a temporary staging table and run a SQL aggregation (`GROUP BY` / `MAX()`) to determine eligibility, or should I process this in-memory using a stream processor (like Java Streams/Spark) to keep the memory footprint low?"*
+
+### 2. Handling "Orphaned" Records
+
+*"Regarding the join between the QBC File and the Segmentation View: If we encounter a record in the QBC file that has a qualifying balance but **no corresponding entry** in the Segmentation View (an orphaned record), how should the job handle it? Should we fail the specific record and log an exception, or default to 'Ineligible' and proceed silently? I want to ensure one bad row doesn't crash the entire batch."*
+
+### 3. Concurrency & Locking
+
+*"When we execute the 'One-Move' rule (direct update from PREF -> SPWS), we are modifying the core Customer Profile. Is there an existing Optimistic Locking mechanism (e.g., version checking) on the customer record? If a separate process (like a profile update) touches the record while my batch is running, how should my job handle the `StaleObjectStateException`? Should it retry immediately or log for manual review?"*
+
+### 4. Interface Design for Future Migration
+
+*"The doc states this is the 'Interim' solution. To minimize tech debt for the future 'Strategic' migration, should I implement the Data Access Object (DAO) layer behind a generic Interface (e.g., `IBalanceProvider`)? This way, when the API becomes available later, we can just swap the implementation class without rewriting the core business logic."*
+
+### 5. Grace Period Metadata Storage
+
+*"For the new 365-day grace period on PLAT/GOLD: Where exactly are we storing the `Grace_Period_Start_Date`? Do we need to add a new column to the Enrollment schema, or is there an existing generic 'attribute bag' (JSON/XML column) on the customer profile where I should store this metadata?"*
+
+### 6. Feature Flag Management (PROD654)
+
+*"Regarding the 'sleeping' code from `PROD654`: Is that logic currently wrapped in a Feature Flag? If so, should I be removing the flag to permanently enable it as part of this release, or should I keep the flag logic but default it to 'True' in the config? I want to ensure we have a rollback strategy if that legacy code causes issues."*
+
+### 7. Race Conditions in "Near-Real-Time" Events
+
+*"The Maintenance section mentions processes based on 'HH change events.' Since we are switching to a batch view for data, there is a risk of a race condition where an event fires (e.g., HH split) but the QBC data is 24 hours old. Should the event listener query the *live* ODS (Operational Data Store) for the latest balance, or is it acceptable to make decisions based on yesterday's cached balance?"*
+
+### 8. Unit Testing Complex Hierarchies
+
+*"For the Unit Tests regarding the 'Highest Wins' logic: Do we have existing Mock objects for the complex Household-Account-Client hierarchy? Or should I build a dedicated Test Data Factory to simulate these edge cases (e.g., 1 Account linked to 1 SPWS HH and 1 PREF HH) to ensure the regression suite covers the 'Downgrade' ceiling rule correctly?"*
+
+### 9. Null Handling for Compliance Fields
+
+*"For the compliance check using `IS_AND_OTHER_NON_TAX_ADV_BAL_AM`: Is this field guaranteed to be non-null in the CDW file? If it is null, should I treat it as `$0` (force the tag 8063) or assume they are fully compliant? I need to know the default safe behavior for null handling here to avoid logic errors."*
+
+### 10. Audit Logging Standards
+
+*"Since we are automating massive enrollment changes (especially the cleanup of SPWS -> AS UHNW), what are the specific Audit Logging requirements? Do we need to write a separate entry to the `AUDIT_LOG` table for every single downtier event including a specific 'Reason Code' (e.g., 'Downtiered via Batch: AS_UHNW_Cleanup'), or is standard system logging sufficient?"*
