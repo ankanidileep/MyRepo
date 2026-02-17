@@ -211,6 +211,9 @@ Exception cases (less than 100 households) requiring account and customer uptier
 
 
 
+  Dependencies include CAT segmentation view file availability, RabbitMQ infrastructure readiness, and successful deployment/configuration of RabbitMQ bindings for CST/Salesforce before BAU job execution; BAU batch processing must complete successfully for SPWS Family Benefits client (Offer 1419) and account (Offer 1418) enrollments prior to event publishing, and any delay or failure in CAT file delivery, RabbitMQ setup, or batch processing may prevent automated event publishing to CST/Salesforce and impact downstream integrations
+
+
 
 
 
