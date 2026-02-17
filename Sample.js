@@ -233,6 +233,15 @@ Exception cases (less than 100 households) requiring account and customer uptier
 
 
 
+2026+02+19 +Retail Seg_Q1_SPWS FB DEV & QA Create RabbitMQ Bindings for Client and Account Enrollments - Dist Acceptance Results & Plan CRQ000002320454,2320474
+2026+02+19 +Retail Seg Q1 SPWS FB DEV & QA Create RabbitMQ Bindings for Client and Account Enrollments - Dist Release Plan CRQ000002320454,2320474
+
+
+
+
+
+
+
 
 
 
