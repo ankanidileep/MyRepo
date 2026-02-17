@@ -142,7 +142,112 @@ AS bundled offer enrolled
 Fee waiver elements activated
 Validate via ORD_ITEM, ORD_ITEM_ELT, ORD_ELT_TRGT
 If you want, I can next:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ✅ Convert this into test case steps
 ✅ Write expected results
 ✅ Help you reply back to the group with a clean technical explanation
 ✅ Map which element ID = which fee waiver
+
+
+
+
+
+
+
+
+
+
+
+
+Purpose
+As part of the Retail Segmentation project, 02 is implementing RabbitMQ bindings for CST/Salesforce integration to enable automated event publishing when batch enrollments are completed for SPWS Family Benefits at both client level (Offer 1419) and account level (Offer 1418).
+This change allows CST/Salesforce to consume RabbitMQ events triggered after BAU batch processing enrolls associated clients and accounts based on household (HH) level enrollments received from CAT segmentation view file.
+Classification
+Schwab Interrial
+Out of Scope
+NA
+Acceptance Criteria
+RabbitMQ bindings for CST/Salesforce are successfully deployed to production for SPWS Family Benefits events.
+Queue cit-salesforce is created and configured with the required bindings:
+02-preference-action.activated.srn.express.experience.spwsFbClient
+02-preference-action.cancelled.srn.express.experience.spwsFbClient
+02-preference-action.activated.srn.express.experience.spwsFbAcct
+02-preference-action.cancelled.srn.express.experience.spwsFbAcct
+RabbitMQ events are successfully published to CST/Salesforce upon completion of batch enrollments for:
+Client-level SPWS Family Benefits (Offer 1419)
+Account-level SPWS Family Benefits (Offer 1418)
+BAU job processes household enrollments from CAT segmentation view file and enrolls associated clients and accounts to SPWS Family Benefits offers.
+CST/Salesforce successfully consumes RabbitMQ events after batch enrollments are completed at both client and account levels.
+Exception cases (less than 100 households) requiring account and customer uptiering are successfully handled without impacting event publishing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
