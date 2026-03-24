@@ -1,0 +1,2726 @@
+Standard recording 52
+3/23 18:45
+Speaker 1 00:00:00
+It should be in the our consumption document given to them also, correct?
+
+Speaker 1 00:00:05
+So that record format of one and the five, the EDG and EDG rows, the fields, just maybe one or two records you verify.
+
+Speaker 1 00:00:16
+for two rows or two targets, like how is the record, what is the final record length of the file and how the records have come.
+
+Speaker 1 00:00:26
+Just add a quick thorough check of the fields if it's come right, the record length is correct that way.
+
+Speaker 1 00:00:33
+Yeah, sure, sure.So while we do that, we'll get to know if there is any check and we'll get to know if there is anything extra coming up.
+
+Speaker 1 00:00:41
+You can also compare with our non-prod files with which you
+
+Speaker 1 00:00:44
+be used for testing, right?
+
+Speaker 1 00:00:46
+Even that and also along with the consumption.
+
+Speaker 1 00:00:49
+So that should tell us that should complete the certification of file format.
+
+Speaker 1 00:00:54
+Okay.Will you be able to do some time now and add that certification in the page?
+
+Speaker 1 00:01:07
+That would be helpful.While Pritam can do the certification and tell me.
+
+Speaker 1 00:01:11
+OK, you don't have the production access, right?
+
+Speaker 1 00:01:23
+How will you access this production?
+
+Speaker 1 00:01:25
+OK, then OK, then then you should be fine too.
+
+Speaker 1 00:01:36
+You can directly add maybe just if you need you can review once you've created them, but you can directly add to certification page.
+
+Speaker 1 00:01:43
+Okay, anything else, team?
+
+Speaker 1 00:01:54
+I know there are a couple of questions with the other teams which is related to which I discussed with Amrita also this morning, which we are going to talk about it in DSM, so that is related on enrollment and test cases.
+
+Speaker 1 00:02:06
+Apart from that, any other things we you want to discuss?
+
+Speaker 2 00:02:11
+Yeah, so I was checking with...
+
+Speaker 2 00:02:16
+Yeah, we can go out here.
+
+Speaker 2 00:02:25
+Okay.So, Naresh was asking me about that 500 response code.
+
+Speaker 2 00:02:31
+So, that 500 response code that you are giving right now, one or more errors encountered.
+
+Speaker 2 00:02:39
+So, we won't be able to get that in enrollment inquiry, right?
+
+Speaker 2 00:02:42
+That will give you, if it is already cancelled, right?
+
+Speaker 2 00:02:47
+If you are doing enrollment inquiry, it will give you the resource query does not exist.
+
+Speaker 2 00:02:52
+That is 404 or 404 response, I think.
+
+Speaker 1 00:02:55
+Okay, I also did that inquiry.
+
+Speaker 1 00:03:01
+Pritam, that is why I found that it is kind of, was not updated that heading.
+
+Speaker 1 00:03:09
+But for me, when I did on Friday, I did get 500 only.
+
+Speaker 2 00:03:13
+Are you saying enrollment inquiry?
+
+Speaker 1 00:03:19
+Yeah, inquiry only.That is why I updated the heading.
+
+Speaker 1 00:03:22
+Let me share my screen.
+
+Speaker 1 00:03:23
+So you're talking about, I did understand.
+
+Speaker 1 00:03:26
+But that was not an enrollment API.
+
+Speaker 1 00:03:30
+Of course, if see this is post, that is when we are doing enrollment.
+
+Speaker 1 00:03:34
+So this is fine, right?
+
+Speaker 1 00:03:35
+And this is if it's already existing, the product is existing and active, then we are getting 4.9, right?
+
+Speaker 1 00:03:44
+So I also did this when it is cancelled, right?
+
+Speaker 1 00:03:49
+And we do this, if it's a post, it will go and enroll back.
+
+Speaker 1 00:03:54
+Okay, so that is why I added this enrollment inquiry.
+
+Speaker 1 00:04:00
+This is not related to enrollment API, any kind of enrollment request.
+
+Speaker 1 00:04:05
+At that point of time, I did get the same.
+
+Speaker 1 00:04:08
+Let me open my prono.
+
+Speaker 2 00:04:10
+Yeah, because enrollment inquiry request is not this one.
+
+Speaker 2 00:04:17
+Enrollment inquiry request is you need to keep the status as well.
+
+Speaker 1 00:04:21
+Okay, I got your point.
+
+Speaker 1 00:04:25
+So you're saying this is not at all needed here, right?
+
+Speaker 1 00:04:28
+We can remove it off because we are not giving for enrollment enquiry.
+
+Speaker 1 00:04:31
+They didn't ask.I don't know why this came into this consumption document.
+
+Speaker 2 00:04:37
+500, see 500, you will get it.
+
+Speaker 2 00:04:40
+Okay, that might, you might get if you're trying to cancel an existing record again, then you might get that response for one or more.
+
+Speaker 1 00:05:00
+Some noise, this background is coming.
+
+Speaker 1 00:05:29
+Narish, do you want a good moment?
+
+Speaker 1 00:05:32
+So next order item.This is what I did.
+
+Speaker 1 00:05:45
+Let me check if it's already cancelled.
+
+Speaker 1 00:05:51
+Correct, it's cancelled and it's top region.
+
+Speaker 1 00:06:00
+So...
+
+Speaker 2 00:06:02
+500, no?This is an enrollment API enquiry.
+
+Speaker 3 00:06:51
+Now, there is an issue with enrollment API.
+
+Speaker 3 00:06:56
+That is the reason we are getting like that.
+
+Speaker 2 00:06:59
+Okay.Yeah, that is what it is.
+
+Speaker 2 00:07:09
+Code 18, unexpected, but ideally what you are saying, what should come here?
+
+Speaker 2 00:07:13
+Not 500 response.
+
+Speaker 3 00:07:16
+I don't think it should be.
+
+Speaker 3 00:07:21
+Nanesh, you remember what was the status quo.
+
+Speaker 3 00:07:23
+It was not modeled.Yes, yes.
+
+Speaker 3 00:07:26
+What's more about that request?
+
+Speaker 3 00:07:30
+Then it will not exist, but it does not exist like that.
+
+Speaker 2 00:07:36
+For me, it is directly giving us 500 for now.
+
+Speaker 2 00:07:42
+I don't know what this is the request body, but what I'm saying is for the consumer, for consumer, this use case was not required in this consumption.
+
+Speaker 2 00:07:54
+Agree, because they asked us only enrollment and cancellation.
+
+Speaker 2 00:08:00
+I mean, enrollment, and if there is anything exist and also the delete endpoint that is cancellation, that is use case one, use case two, if it's already existing and a consumer tries to wrap enrolls, then what is the response and how to unenroll?
+
+Speaker 2 00:08:15
+the product.So these are the three use case.
+
+Speaker 2 00:08:18
+Somehow this also came into between.
+
+Speaker 2 00:08:20
+That is what I've owned.
+
+Speaker 2 00:08:21
+I've set up a call with Subba today that is from CST to make sure that this consumption they have not considered in any way.
+
+Speaker 2 00:08:30
+Then I will remove it off from here or I will say I'll scratch it out.
+
+Speaker 2 00:08:37
+Okay, the reason this is because this is an inquiry whenever they want to, but the consumption we have given is to enrollment.
+
+Speaker 2 00:08:45
+That is to enroll into this product.
+
+Speaker 2 00:08:48
+That will be if existing, what is the error?
+
+Speaker 2 00:08:51
+Enrollment successful, what is the error?
+
+Speaker 2 00:08:53
+And how can they hit the delete endpoint?
+
+Speaker 2 00:08:56
+That means how can they delete the product completely from the database?
+
+Speaker 2 00:08:59
+And this is altogether somehow it came into, I think this was an initial stage when.
+
+Speaker 2 00:09:03
+I have done, but I got it reviewed from Amir, but somehow this fell into this situation, but even now, but this stands by correct only 500 response only they will get according to what I'm seeing in Pruno in Tapri Janna for that scenario.
+
+Speaker 2 00:09:22
+The response we are getting is 500 only, but I'll have a call with Subba and I'll tell him that have they done anything around this?
+
+Speaker 2 00:09:34
+OK, in their code, do they have anything done coding?
+
+Speaker 2 00:09:40
+Ideally they should not have done because for them enrollment and this delete, right?
+
+Speaker 2 00:09:45
+This is this is what matters.
+
+Speaker 2 00:09:47
+Successful.I mean unenrolling the the product.
+
+Speaker 2 00:09:52
+Ohh method.OK, so for.
+
+Speaker 1 00:10:00
+consumption document, I mean consumption document for contract test cases.
+
+Speaker 1 00:10:05
+I do not know how much this information is needed, but ideally this consumption should not contain this data.
+
+Speaker 2 00:10:15
+Yeah, one more doubt, can you please share that consumption document?
+
+Speaker 2 00:10:21
+Okay, can you go to the first case?
+
+Speaker 1 00:10:26
+Okay.
+
+Speaker 2 00:10:27
+Like that is a two note one.
+
+Speaker 2 00:10:30
+The request I understand, but in response, is the consumer going to consume all four fields mentioned like ID, resource key?
+
+Speaker 1 00:10:42
+No, he's, that's what I confirmed, no?
+
+Speaker 1 00:10:47
+Product, resource key and target.
+
+Speaker 1 00:10:48
+And he also sent some details, right?
+
+Speaker 2 00:10:52
+That is regarding the other cases, I believe.
+
+Speaker 2 00:10:55
+See list.
+
+Speaker 1 00:11:00
+I don't know, I'm not finding this.
+
+Speaker 1 00:11:32
+Got it.Kindly find the response mapping from the O2 response.
+
+Speaker 1 00:11:53
+Ineligible response code target already enrolled into product.
+
+Speaker 1 00:11:58
+See, this is the product they are consuming.
+
+Speaker 1 00:12:00
+Product resource key.501 or more errors encountered for this request.
+
+Speaker 2 00:12:09
+What about the successful scenario that is 201?
+
+Speaker 1 00:12:13
+Okay, 500, okay, they are taking this one.
+
+Speaker 1 00:12:21
+Okay, I think they are already consuming this.
+
+Speaker 1 00:12:26
+Then we need to check with them.
+
+Speaker 1 00:12:27
+Looks like it's an again inquiry.
+
+Speaker 1 00:12:30
+You need for two, not one.
+
+Speaker 1 00:12:39
+Ideally, from the response, what I'm thinking is target and the product resource scheme.
+
+Speaker 1 00:12:44
+But today, when I meet with Supa, I can confirm you and tell.
+
+Speaker 1 00:12:50
+OK, this is what I need to confirm with him also.
+
+Speaker 1 00:12:55
+If this is not 500 right, Pritam, then there will be a...
+
+Speaker 1 00:12:59
+Yeah, we'll see to that.
+
+Speaker 1 00:13:02
+But what I'm thinking response from now, what I'm getting is 500.
+
+Speaker 1 00:13:06
+That is what even I discussed with other folks here.
+
+Speaker 1 00:13:09
+And that's all is needed, Naresh, for this.
+
+Speaker 2 00:13:14
+Yeah.
+
+Speaker 1 00:13:15
+These 2 things.Yeah.And my understanding is they will take both because they need to know target, right?
+
+Speaker 1 00:13:22
+For which household they need to know, right?
+
+Speaker 1 00:13:26
+For which household this product is active.
+
+Speaker 1 00:13:28
+So.That has to be combination of both.
+
+Speaker 1 00:13:31
+But I'll confirm you that should be the combination always.
+
+Speaker 2 00:13:34
+In that case, that should be removed from here, right?
+
+Speaker 2 00:13:38
+Which are all not written in this from this page.
+
+Speaker 1 00:13:41
+This enquiry?Yeah, this enquiry I'll check with him.
+
+Speaker 2 00:13:46
+No, in the response, they have mentioned some links section as well, right?
+
+Speaker 3 00:13:51
+No, no, this is the response that we will get after.
+
+Speaker 3 00:13:56
+Running that request, OK?
+
+Speaker 3 00:13:59
+So, since we are giving them the consumption, right, like they will see all the fields, but the consumer will tell us that what are the fields that they are consuming.
+
+Speaker 3 00:14:11
+It's OK.It can be here also in the consumption, another field, like link section or eligible equals to or ID section.
+
+Speaker 3 00:14:19
+That is fine.But whatever the contract test cases that we are making, like they are, we might need to consider only the target of the product issues.
+
+Speaker 2 00:14:29
+Yeah, the reason why I'm asking this, Bala asked me the question, this question like why we are having all the case, we just need to mention what are the case they are consuming.
+
+Speaker 1 00:14:41
+He might have told in the prospective of creating the contract test cases, but this is the main.
+
+Speaker 1 00:14:47
+Main behavior, how any response format will be?
+
+Speaker 1 00:14:52
+It cannot, yes, it cannot skip any of the skeleton, so from any consumer prospect.
+
+Speaker 1 00:15:00
+Right, for them to get a successful response of enrollment, they need to know which is the target.
+
+Speaker 1 00:15:06
+See, because you are without your account, I cannot credit or debit in deposit money in your account just by knowing that you have an you have, let's say, a mix offer on your just by knowing that product.
+
+Speaker 1 00:15:22
+I cannot say let's deposit this money into the leaves.
+
+Speaker 1 00:15:26
+Account for that.I need to know your account ID.
+
+Speaker 1 00:15:30
+So that is a key here.So the consumer needs to know what is target.
+
+Speaker 1 00:15:34
+Now that target which product they have to enable and send it to.
+
+Speaker 1 00:15:38
+So these two are 100% there.
+
+Speaker 1 00:15:40
+These two, but I'm just going to confirm you that is how your thought process you have to also look at whenever you get a question from someone, right?
+
+Speaker 1 00:15:49
+So that's how you have to also think in that way.
+
+Speaker 1 00:15:54
+And this is a complete response body which O2 provides from our endpoint.
+
+Speaker 1 00:16:00
+That is from post endpoint.
+
+Speaker 1 00:16:02
+So this is how the response looks like.
+
+Speaker 1 00:16:04
+Everything should be there.
+
+Speaker 1 00:16:05
+It cannot be that only two fields is consumed, so we will give them no.
+
+Speaker 1 00:16:09
+This is the payload of our response.
+
+Speaker 1 00:16:12
+Similarly, for anything that is existing, this is the payload of the response.
+
+Speaker 1 00:16:16
+And whenever that is cancelled and they try to do an inquiry, this is kind of a payload and this is our response.
+
+Speaker 1 00:16:22
+So these are all, since long, this is how our O2 responses works and different type of points.
+
+Speaker 1 00:16:31
+If you try to use Drono right and do a couple of services, then you will understand about that.
+
+Speaker 1 00:16:38
+But this is just for your sake.
+
+Speaker 1 00:16:40
+I'm going to reconfirm, but this is going to be the combination of two.
+
+Speaker 2 00:16:44
+OK, do you have one thing?
+
+Speaker 1 00:17:01
+Can you add those details in the certification page?
+
+Speaker 1 00:17:04
+Yeah, actually, I'm not even with the screenshots.
+
+Speaker 2 00:17:07
+Yeah, I don't even connect me with that only.
+
+Speaker 1 00:17:18
+Yeah, I'm sending it to you.
+
+Speaker 1 00:17:19
+Flex changes.Okay, this is actual flex, this deployment.
+
+Speaker 1 00:17:30
+There was one which the leap has created.
+
+Speaker 1 00:17:34
+That one, I think.I think he sent.
+
+Speaker 2 00:17:39
+Yeah, I see.
+
+Speaker 1 00:17:39
+No, not that one.There was one scheduling one also, right?
+
+Speaker 1 00:17:44
+Scheduling changes which actually completed.
+
+Speaker 1 00:17:47
+Okay, add into the same one.
+
+Speaker 1 00:17:52
+I can link this to the other scheduling changes.
+
+Speaker 2 00:17:54
+Okay, which is the same one.
+
+Speaker 1 00:17:56
+Yeah, you can add it to here so that we'll have all the flex certification in the same one.
+
+Speaker 1 00:18:02
+I will link this confluence page, the CRQ scheduling changes we linked and another different link.
+
+Speaker 1 00:18:09
+I will link it to that.
+
+Speaker 1 00:18:11
+That's fine.You can go ahead and add it.
+
+Speaker 2 00:18:13
+I will add it to the submit to this page.
+
+Speaker 1 00:18:21
+Okay, so we are going to, if you have these two information, you are good at contract test cases, right?
+
+Speaker 1 00:18:26
+Because that needs to be reviewed by Amir as well after we create.
+
+Speaker 1 00:18:29
+Will you be able to my review and Amir's review so that I can review it here with other Java team?
+
+Speaker 3 00:18:41
+Yeah, I can share with the branch.
+
+Speaker 1 00:18:44
+Okay.
+
+Speaker 4 00:18:48
+Yeah, I think I am pinging the account, so just kind of check, so this is what we got, so file count and also the account that it cancelled and active.
+
+Speaker 1 00:19:13
+They are all matching, is it okay?
+
+Speaker 1 00:19:18
+Active and cancelled, perfect.
+
+Speaker 1 00:19:22
+This is the level of...
+
+Speaker 1 00:19:24
+Yeah, consistency we wanted.
+
+Speaker 1 00:19:28
+Yeah, this is a book of it.
+
+Speaker 1 00:19:30
+One, two, three, 4, 5, 6, 7, and the 8th one is 281, which you have already checked, right?
+
+Speaker 4 00:19:39
+Okay, 21, I'm sharing the what document, so there it will be.
+
+Speaker 1 00:19:47
+So will you put all these two conference page with also the job and school details?
+
+Speaker 1 00:19:54
+I'll go through it after our DSM once.
+
+Speaker 1 00:19:57
+If I have anything, I'll let you know.
+
+Speaker 1 00:20:00
+OK, I will add it directly to the.
+
+Speaker 2 00:20:02
+Conference, yes, yeah, let's add that.
+
+Speaker 2 00:20:05
+OK, let's jump on to our daily huddle and refinement.
+
+Speaker 2 00:20:09
+OK, we'll see you all there.
+
+Speaker 3 00:20:12
+Yeah, thanks.
+
+Speaker 2 00:20:16
+Yeah, thanks.Thanks.Bye.
+
+Speaker 1 00:20:18
+So, we came at Divya, Pritam, Amrita, Naresh, Pratap.
+
+Speaker 1 00:21:15
+Hey Lee, good morning.
+
+Speaker 4 00:21:43
+Hey, good morning.Happy Monday, everyone.
+
+Speaker 1 00:21:58
+Hey Lee.
+
+Speaker 2 00:22:00
+Hey Lee, happy Monday.
+
+Speaker 1 00:22:02
+So we have...Somehow I have to faith Lee this Thursday night, 26th.
+
+Speaker 1 00:22:18
+to Wednesday.So we're probably closing the sprint on Wednesday now.
+
+Speaker 1 00:22:26
+Going onwards, right?Let's say we might get one day less here.
+
+Speaker 1 00:22:32
+And that will be a little crunch because as you see, the plan is starting and put it somewhere here, fit it somewhere here, preferably 830, same slot.
+
+Speaker 4 00:22:47
+That sounds good, and you can kind of, if you need us to start while you're finishing up Optimus, we can, yeah, do that, and you can bounce over when you're done.
+
+Speaker 1 00:23:00
+Exactly, yeah, So, yeah, planning is not too far, guys.
+
+Speaker 1 00:23:05
+So, let's look at, let me just go through like stories which are blocker right now, blocking state or anything.
+
+Speaker 1 00:23:13
+Let's discuss that, and...
+
+Speaker 1 00:23:16
+We also go through, because we're going to have a less time, so let's discuss the first sprint of Q2, right, which is 28 story point I can already see.
+
+Speaker 1 00:23:25
+And this is also showing 28.
+
+Speaker 1 00:23:29
+Our velocity is 25.Let me double check this one.
+
+Speaker 1 00:23:33
+OK, so that's the first sprint.
+
+Speaker 1 00:23:40
+Yeah, 25.84.So 25 to 26 story point.
+
+Speaker 1 00:23:45
+Total 184 load.OK, so is that sounds right, Lee?
+
+Speaker 4 00:23:54
+Yeah, I think that sounds right.
+
+Speaker 4 00:23:58
+We just need to walk through a few here and see if there's probably a couple that cannot go.
+
+Speaker 1 00:24:04
+OK, yeah, So if first of all, our biggest concern should be if anything is falling back right into Q2.
+
+Speaker 1 00:24:15
+And if we are closing that epic, is it in a continuation of Q2 or not, right?
+
+Speaker 1 00:24:23
+So I'll just go by name, like, okay.
+
+Speaker 1 00:24:28
+Dalip, are we, RMAs are done on your end?
+
+Speaker 1 00:24:34
+You are working on this story, maybe right now, scheduling monthly job on enrollment.
+
+Speaker 1 00:24:38
+Is it going good, Dalip?
+
+Speaker 2 00:24:40
+Yes, Nirav, I have raised a good question.
+
+Speaker 2 00:24:44
+No, following with the following up with the team.
+
+Speaker 1 00:24:48
+Okay, so this is your time by Wednesday.
+
+Speaker 1 00:24:52
+It can be completed.
+
+Speaker 2 00:24:53
+I didn't get any response from them.
+
+Speaker 2 00:24:56
+Okay, I'll ping him personally.
+
+Speaker 1 00:25:00
+Did you involve Divya Amrutha?
+
+Speaker 1 00:25:04
+Yeah, but you have to involve me and Lee, you know, please add to the channel if you have any channel right, mate, but now we have do it or let back into next sprint, right?
+
+Speaker 1 00:25:18
+So, but the request is in the open state only.
+
+Speaker 2 00:25:21
+I'll follow up tomorrow.
+
+Speaker 1 00:25:23
+Okay, yeah.If needed, please invoice.
+
+Speaker 1 00:25:29
+On short time, we can follow up, right?
+
+Speaker 1 00:25:33
+So, sure, that is, how is this bike story for broad 654 and HMD creation?
+
+Speaker 2 00:25:43
+I think I'm correctly working on that, Nero, and Amit has few queries.
+
+Speaker 2 00:25:51
+Thanks, Nero.Okay, yeah, this is all we have.
+
+Speaker 2 00:25:56
+We have a meeting this afternoon or this morning with the business to walk through the scenarios.
+
+Speaker 2 00:26:01
+OK, yeah, once that is done, we can work on it.
+
+Speaker 2 00:26:09
+We can, we'll be able to close it.
+
+Speaker 1 00:26:11
+OK, this is keep close to it, so yeah, OK, yeah, due to those next to you.
+
+Speaker 1 00:26:20
+But it was just like, we got a couple of text to see ES3 integration and set configuration control card.
+
+Speaker 1 00:26:37
+Is it on track?
+
+Speaker 2 00:26:39
+Because for ES3, we are, we have done set up in for ES3 and we are able to test it.
+
+Speaker 2 00:26:48
+And, plus, there were some technical news earlier, file name convention was taken, but now looks like it's taken, so we are coordinating with the team and probably we should be able to conclude in a long call.
+
+Speaker 2 00:27:03
+However, we are not having production setup ready, so probably that we have to take in the next sprint or in the collecting new sprint once we are having all the production part is clear and next week the whatever setup is required for production.
+
+Speaker 2 00:27:19
+So we will have all both review the package and we'll do a QA from that package.
+
+Speaker 3 00:27:24
+You know, Krishna, we can do the QA from this package only, right?
+
+Speaker 3 00:27:30
+Because production security and accessory we don't need for QA, right?
+
+Speaker 3 00:27:35
+We need that on-course security and security only.
+
+Speaker 3 00:27:40
+Production part will be any way different, security will be any way different that should not impact our.
+
+Speaker 3 00:27:47
+A few, it's going.So what I'm saying, maybe package changes, we can take a one pointer next thing.
+
+Speaker 3 00:27:55
+But even if you point it to the production, right, you won't be able to do it, right.
+
+Speaker 2 00:28:01
+You got my contact, right?
+
+Speaker 2 00:28:03
+You can do that also.
+
+Speaker 4 00:28:07
+One more update here, Amrita and team.
+
+Speaker 4 00:28:15
+This ES3 production path will not be given in the Jira anyway, the access and the secret key, because that is confidential.
+
+Speaker 4 00:28:22
+And I have already spoken to Save team about they have access, they know the access key, and they also have the secret path keys.
+
+Speaker 4 00:28:32
+They will give us the credentials.
+
+Speaker 4 00:28:34
+So right now what we can do is we can build the package like we are going to deploy in production, but we can use the override in our test libraries how we do.
+
+Speaker 4 00:28:44
+Just the defense has to be the part.
+
+Speaker 4 00:28:47
+Yeah.
+
+Speaker 3 00:28:49
+That is the, that's what he's saying.
+
+Speaker 3 00:28:51
+We cannot build the package, production package, until and unless we get the security and the private key, that's why.
+
+Speaker 3 00:28:57
+Otherwise everything is there and production path also it is not as yet been sent, right?
+
+Speaker 3 00:29:02
+That's okay.That is also not shared.
+
+Speaker 4 00:29:05
+So those, I can share it today.
+
+Speaker 4 00:29:08
+That's what I'm saying.
+
+Speaker 4 00:29:08
+I can share it today if the path itself, I can get the details from the save and send the e-mail only to the developers, and I'll just copy the no one else in that, and I'll share the credentials.
+
+Speaker 4 00:29:20
+But what I'm saying is the control cards right now can't be built like we want to production, like however we do for others.
+
+Speaker 3 00:29:27
+Okay, that's it already done.
+
+Speaker 3 00:29:30
+So, 2A can be done, that's what I'm saying, 2A can be done only broad changes, like where we actually need the broad access, broad credentials.
+
+Speaker 3 00:29:40
+Those changes, it will be done last time once we get all the details, right.
+
+Speaker 4 00:29:44
+Yeah, okay, that also works.
+
+Speaker 4 00:29:50
+Yeah, what I was saying was we can build the control card with the production access key, everything in the production format, and just override the control card.
+
+Speaker 1 00:30:00
+Cards pointing to test.
+
+Speaker 2 00:30:02
+So how can we write it without having the access key, right?
+
+Speaker 2 00:30:09
+Yeah, that is our first question.
+
+Speaker 2 00:30:11
+That's why we have written it like our whatever is needed only secretly access key and the card is left out, right?
+
+Speaker 2 00:30:18
+So we are using the whatever.
+
+Speaker 1 00:30:21
+Yeah, and I'll discuss with you, I'll tell you how I'm letting you, but we can discuss that offline, yeah.
+
+Speaker 1 00:30:29
+For now, we are good, right?
+
+Speaker 1 00:30:32
+For in the environment, you are good, right?
+
+Speaker 1 00:30:34
+To proceed with demand.
+
+Speaker 2 00:30:35
+Yes, I just received a monthly file and only I have only received a daily file, so we are good for daily file.
+
+Speaker 1 00:30:43
+Okay, yeah, we follow up with the...
+
+Speaker 3 00:30:47
+Okay, so if any consecutive story need to be done right, please ping me and Lee, you know, for the next sprint for one pointer, as you said, Amruta and Divya.
+
+Speaker 3 00:31:07
+So let's do that.Yeah, someone was saying something.
+
+Speaker 3 00:31:13
+Pritham or Krishna?
+
+Speaker 4 00:31:16
+No, Krishna is up here.
+
+Speaker 4 00:31:23
+I'm audible.Yeah,Configuration control call at the ninety-day period.
+
+Speaker 4 00:31:28
+If you remember last week, we had detailed discussion on this one, and yeah, if you will, if you understand, it is a good part, so we are working on this case part for profit.
+
+Speaker 4 00:31:40
+EA would not be possible.
+
+Speaker 4 00:31:41
+If you remember, we raised this flag that we might not be able to do in this system.
+
+Speaker 4 00:31:46
+However, TA can be related with the case data, so yeah, this is the status, and yeah, we were working on this thing.
+
+Speaker 3 00:31:54
+Okay, so when we make a next part, right, we have to be very precise for, because we're going to be closing this app, right?
+
+Speaker 3 00:32:04
+Q2, we have a different bucket.
+
+Speaker 3 00:32:06
+So I think when we create a story, a new story, when you ping me and Lee and Divya, right, for the new story, probably he can tell us which bucket to put that story into for the Q2, right?
+
+Speaker 1 00:32:24
+So, we have this epic in the queue also, Neera.
+
+Speaker 1 00:32:28
+Yeah, an enrollment epic is going to be there in Q2.
+
+Speaker 1 00:32:31
+Yeah, so, and additionally, there was a little to and forth about discussion.
+
+Speaker 1 00:32:36
+I discussed with Lee as well and Amrita as well this morning, their morning about the story, the requirements, and there is little...
+
+Speaker 1 00:32:45
+more things that has to be agreed between all the team members.
+
+Speaker 1 00:32:49
+So in the 16th minute, I'm going to walk through that acceptance criteria and the entire requirement, and then we'll proceed forward with the dev for this sprint.
+
+Speaker 1 00:32:59
+Once we are in the same understanding, I think there is little confusion just around the limit setup we have.
+
+Speaker 1 00:33:05
+So we get that through, then we can aim to finish the dev, but QA, we can move it to Q2.
+
+Speaker 1 00:33:13
+That we for sure know that QA cannot be possible in the sprint.
+
+Speaker 3 00:33:17
+Yeah, so I see already there are epics, right?
+
+Speaker 3 00:33:20
+So, right, yes, yeah, okay, as long as we have a plan, right?
+
+Speaker 3 00:33:24
+So, yeah, we have to be on the same page, everyone, right?
+
+Speaker 3 00:33:29
+So, okay, let's proceed, and please, in a technical discussion, call out if anything, I mean, we know the other part of the story that QA needs to be done, but...
+
+Speaker 3 00:33:40
+if something is falling back, point out.
+
+Speaker 3 00:33:45
+So, Pratap, you working on your stories?
+
+Speaker 3 00:33:48
+It's probably QA stories, it's not visible here, but it's on track.
+
+Speaker 3 00:33:52
+Yes, I never.So, there was a discuss this plan which I mentioned, so that is a that's what you were working on, right?
+
+Speaker 3 00:34:01
+Yeah, please, and the S3 bucket and all of the same plan, so we can start the QA from the DD Prime, which is the S3 bucket.
+
+Speaker 3 00:34:09
+So, test case, so we need a monkey file, so test case is created by, I need to create all the test run test cases for the subtasks, yeah, We can also set up from our teams the nodes, right?
+
+Speaker 3 00:34:29
+The reminder point we bring in, but I see there is also a function of nodes, so we can also daily after DSM or anything we can put in nodes.
+
+Speaker 3 00:34:38
+So, guys can always go back and look into and Krishna this turn on maintenance and production support automated BAU conciliation reconciliation.
+
+Speaker 4 00:34:51
+Yeah, this is ready for acceptance.
+
+Speaker 1 00:35:00
+We came in the last week, so can we close this?
+
+Speaker 1 00:35:03
+Can we close this?OK, so anything you need to be reviewed for Krishna or let's test together?
+
+Speaker 1 00:35:23
+We broke down the story, right?
+
+Speaker 1 00:35:24
+Isn't it, Krishna?Correct, correct, yes, yeah, right, yeah.
+
+Speaker 1 00:35:29
+Okay, so this is ready for acceptance, Nee, for you.
+
+Speaker 1 00:35:33
+Once you look at the result, and there's also job failure for prod 800 part two.
+
+Speaker 1 00:35:47
+This also looks like completed.
+
+Speaker 1 00:35:49
+Okay, analysis.Yeah, this needs monitoring.
+
+Speaker 1 00:35:53
+Okay, and it's only by the RM team basically.
+
+Speaker 1 00:35:55
+So, that's not because the team was completely following with the following up with the other team that some upgrading or migration was happening here, but actually it was not issued from the other side.
+
+Speaker 1 00:36:13
+We updated all the details in the story, so we can close it now.
+
+Speaker 2 00:36:20
+No, one minute, let's not close the story because I have provided the parse file name to save.
+
+Speaker 2 00:36:26
+discussed with DBA and then I give the parse file to save to load it and from then it has stopped failing.
+
+Speaker 2 00:36:34
+So I want it to be open at least till the end of this country.
+
+Speaker 2 00:36:39
+Like you said, Lee, we'll not take any further additional ask from save, but I want to keep this open until at least next two runs because this is a daily job.
+
+Speaker 2 00:36:50
+It's not a weekend job.
+
+Speaker 2 00:36:52
+It has gone through one successful
+
+Speaker 2 00:36:55
+execution last week on Friday.
+
+Speaker 2 00:36:57
+So we'll see for today and tomorrow and then we can close it.
+
+Speaker 3 00:37:01
+Yeah, I think that makes sense.
+
+Speaker 3 00:37:04
+Yeah.
+
+Speaker 2 00:37:04
+If there's any other further ask, definitely I'll route Shankar to your way.
+
+Speaker 2 00:37:10
+But yeah, pass foil was provided by me for them to load.
+
+Speaker 2 00:37:15
+So that's the reason I don't want to close this.
+
+Speaker 4 00:37:17
+Yeah, I think I'll...What my concern is, right?
+
+Speaker 4 00:37:24
+We have like checked with UA, then DBA came back and they found out the issue, but SaveTime is counting on us, right?
+
+Speaker 4 00:37:32
+From last rate, we are getting the hours here.
+
+Speaker 4 00:37:34
+You are also working with the same team.
+
+Speaker 4 00:37:36
+So that should not be entertained in the next time, right?
+
+Speaker 4 00:37:40
+We should like move it to the MLOR Galaxy instead of faking this load on us because only our data is coming with the input file, right?
+
+Speaker 4 00:37:48
+Because this is something which was not worth.
+
+Speaker 2 00:37:50
+Initially, yeah, right, Yeah, that's what even Lee and myself also discussed on Friday.
+
+Speaker 2 00:37:58
+And if they are coming in our way, right, just because our data is there, then definitely Lee will take that ahead with them forward.
+
+Speaker 2 00:38:05
+We have already discussed that.
+
+Speaker 3 00:38:06
+Yeah, it's just one of the situations where, yeah, 'cause there's nothing going on from our side that's an issue.
+
+Speaker 3 00:38:16
+It's just related, and then we get it kind of pulled into it.
+
+Speaker 3 00:38:19
+And what David and I talked about on Friday is if they continue to come back to us, I'm going to have a conversation with the safe folks and ask them to open an FDR so that the product side can determine which team works on this.
+
+Speaker 3 00:38:34
+It may well be us, but we don't want to just take something blindly, especially if it's not something we're actually working on.
+
+Speaker 3 00:38:42
+So I'll help sort of front that if it continues to try to come our way.
+
+Speaker 4 00:38:48
+Yeah, thank you.
+
+Speaker 2 00:38:55
+Yeah, thanks.
+
+Speaker 1 00:38:56
+Okay, sounds good.Let's go to Amrita.
+
+Speaker 1 00:39:02
+And this one is done deployment, mismatch, blacks decommission, and blacks deployment, right?
+
+Speaker 1 00:39:18
+So, this is a deployment story.
+
+Speaker 1 00:39:20
+We're monitoring until when.
+
+Speaker 4 00:39:22
+No, this can be closed.
+
+Speaker 1 00:39:26
+We have closed now.Okay, is CRQ closed?
+
+Speaker 1 00:39:30
+Maybe we can open, yeah, but.
+
+Speaker 4 00:39:32
+Maybe we can open till tomorrow, but anyway, this job will not run until next week, so there is no link to keep it open, but if you want, we can keep it open till the end of the day.
+
+Speaker 1 00:39:43
+Only we have this, let's take a list.
+
+Speaker 1 00:39:46
+Yeah, let's take a less headache on the last day, because Wednesday we have a BI running too, right?
+
+Speaker 2 00:39:52
+No, Nina, we need a sign-off from Flex team on this, because we deployed it, we have closed the...
+
+Speaker 1 00:40:00
+CRK, because we had a cutoff time, but we need also to confirm us that they have consumed our weekly Android file successfully.
+
+Speaker 1 00:40:09
+That we don't have, we haven't heard from them yet.
+
+Speaker 1 00:40:13
+That's the end leg of the deployment.
+
+Speaker 2 00:40:16
+So, but yeah, have you requested for five months?
+
+Speaker 2 00:40:20
+Like any mail has been initiated for that means they will not be, yeah, we are waiting for.
+
+Speaker 1 00:40:26
+No, it's going on.Today I'm going to send an e-mail.
+
+Speaker 1 00:40:30
+Like whenever they have deployed their code, they send in Flex update, having all our partners in the loop.
+
+Speaker 1 00:40:36
+And that's going on between Oto and Flex.
+
+Speaker 1 00:40:38
+I think looks like Orgon is express, offshore team is not on that.
+
+Speaker 1 00:40:42
+I'll loop you guys in that.
+
+Speaker 1 00:40:44
+I'm going to send them an update in some time saying that our weekly unload is successful, certification is complete, asking for a confirmation from them.
+
+Speaker 1 00:40:51
+The same.Okay, once we hear from them, I'll attach that e-mail here, and then the story is good to be closed.
+
+Speaker 2 00:41:01
+Yeah, it's whatever comes first, right?
+
+Speaker 2 00:41:05
+Yeah, sign off on our free time, right?
+
+Speaker 1 00:41:06
+Yeah, we have to close this, right.
+
+Speaker 3 00:41:12
+Yeah, that's for them, but yeah, correct.
+
+Speaker 1 00:41:17
+Then, Lee, just for your information, the job failed yesterday, which was dependent on, yeah, weekly.
+
+Speaker 1 00:41:23
+And Amrita did inform them.
+
+Speaker 1 00:41:26
+She looked at a high level and she informed them it's a space issue, which ideally they were also anticipating that for the first unload, definitely it is going to have a beyond historic data.
+
+Speaker 1 00:41:39
+Yeah, whatever we did as a part of mass enrollments, everything is going to get in there.
+
+Speaker 1 00:41:44
+So we'll hear from them.
+
+Speaker 1 00:41:47
+Once I send an e-mail, we'll wait until we hear from them.
+
+Speaker 1 00:41:50
+If not, then we are good from our perspective.
+
+Speaker 1 00:41:54
+What certification we have done, we can go ahead and close the story.
+
+Speaker 3 00:41:57
+Okay, sounds good.Okay, completely close.
+
+Speaker 4 00:42:05
+Let's try to close it by tomorrow, right?
+
+Speaker 4 00:42:10
+So that way we have less things to do.
+
+Speaker 4 00:42:13
+Yes, that's good.Okay, so that's Amruta.
+
+Speaker 4 00:42:19
+This is Pritham.Pritham, you have a couple of stories on distributed contract test cases for household part 2.
+
+Speaker 4 00:42:30
+Yeah, you know, so for contract test cases I'm done, but maybe there might a little bit of change that is required.
+
+Speaker 4 00:42:42
+So Divya will give us the confirmation by today itself.
+
+Speaker 4 00:42:45
+And for the evaluation automation, I'm already done.
+
+Speaker 4 00:42:49
+Yeah, so just waiting that you can we use the, so I mean there was open question that can we use the accelerator on this one?
+
+Speaker 4 00:43:02
+So, did you get any?
+
+Speaker 1 00:43:03
+Yeah, I confirmed you also, Pritam.
+
+Speaker 1 00:43:06
+I spoke to Prasad.He said, since it's a select, you can put an accelerator on and you can run.
+
+Speaker 1 00:43:12
+I sent him those queries also.
+
+Speaker 1 00:43:14
+So he's okay with that.
+
+Speaker 1 00:43:16
+You can go ahead and prepare the jobs, go onload the data, have an accelerator on it, on it.
+
+Speaker 4 00:43:21
+Okay, So tomorrow I will complete this one.
+
+Speaker 4 00:43:28
+Okay.Any demos guys for this sprint?
+
+Speaker 4 00:43:35
+Because we'd like to, if we can complete it by tomorrow, we can do demo tomorrow.
+
+Speaker 4 00:43:42
+It will be better.
+
+Speaker 2 00:43:45
+So, Pratha, Pratha, will you be able to do the demo on ES3?
+
+Speaker 4 00:43:50
+Yes, Amrita.So, I'll try to do the demo on that, so it's counting and mostly counting more.
+
+Speaker 2 00:44:00
+So, there is one story needed that can be demoed.
+
+Speaker 4 00:44:05
+Yeah, I'll come back to that one.
+
+Speaker 4 00:44:12
+Yeah, the first one is.
+
+Speaker 1 00:44:19
+Exception enrollment, which Durga and team have completed with the exception enrollment part.
+
+Speaker 1 00:44:26
+And SPR, the what bits and pieces we had to support the flex is all done.
+
+Speaker 1 00:44:31
+Creation of empty file for family benefits is also certified.
+
+Speaker 1 00:44:35
+Parse file is loaded.All that work is done as a part of first.
+
+Speaker 1 00:44:39
+CRQ.We are just hearing if there is anything else need to be done by tomorrow.
+
+Speaker 1 00:44:48
+Any other exception enrollments?
+
+Speaker 1 00:44:49
+Let's know, right?We only do once biweekly.
+
+Speaker 3 00:44:51
+Yeah, we won't do another one until the first week of enroll.
+
+Speaker 1 00:44:55
+Yeah, right.So CRQ is open.
+
+Speaker 1 00:45:00
+until tomorrow morning.
+
+Speaker 1 00:45:02
+And then the second one, also the same update.
+
+Speaker 1 00:45:06
+It's a scheduling.It's all completed, certified deployment page is updated.
+
+Speaker 1 00:45:10
+Just if I get an e-mail from them, confirmation that they have all gone through right reflex and it can be attached and like previous story, else we can close it.
+
+Speaker 1 00:45:20
+And related to exception enrollment, enrollment API consumption, this I'm waiting for the devs.
+
+Speaker 1 00:45:27
+Spike to be completed.I haven't started on this.
+
+Speaker 1 00:45:30
+The spike story which is there that I'm waiting on that probably this can spill over, but we'll see.
+
+Speaker 1 00:45:38
+We still have two more days today and tomorrow if I can aim to finish this.
+
+Speaker 1 00:45:44
+That's the only risk I see.
+
+Speaker 1 00:45:46
+And then the last one, 365 days expiry date.
+
+Speaker 1 00:45:50
+So there is an update on this link.
+
+Speaker 1 00:45:52
+We met with client central team, right, last week and you were not on the call.
+
+Speaker 1 00:45:58
+So they do not need the client date or client details on the UI.
+
+Speaker 1 00:46:04
+The reason being the UI drives via household or account details, not via client.
+
+Speaker 1 00:46:10
+So they only want households.
+
+Speaker 1 00:46:14
+tier household enrollment date and that's the request was and also the expiry date.
+
+Speaker 1 00:46:24
+And right now in the O2 scope, since we are moving to modernization, so the preference API response does not have that functionality enabled to provide them expiry date.
+
+Speaker 1 00:46:38
+So if we had to get them, then there's going to be a conflict app change in the preference, which definitely gets going to get rejected by our architects.
+
+Speaker 1 00:46:48
+Me and Amir socialized that with a larger group.
+
+Speaker 1 00:46:52
+And thinking about the target state is what we can talk to our architects about how this can be provided to them.
+
+Speaker 1 00:47:00
+They are okay with that.
+
+Speaker 1 00:47:02
+And there were a lot of questions from Sanjeev from Client Central, which we also had a working session with them on Friday later, Friday or Thursday, I do not recall.
+
+Speaker 1 00:47:14
+And his clarifications, all queries are resolved.
+
+Speaker 1 00:47:18
+And he wanted us to update the confluence of consumption rate, which I have done and also shared in the group.
+
+Speaker 1 00:47:24
+For now, there is no outstanding questions from them.
+
+Speaker 1 00:47:26
+The only thing is they have to amend their UI page for the risk of unenrollment date.
+
+Speaker 1 00:47:32
+which was agreed that expiry date would come up there, but now that we cannot provide that consumption, so they will do some amendment at their end as a launch of first production launch, right?
+
+Speaker 1 00:47:46
+Yuni mentioned that they will have some other fields or removed that field remote from there.
+
+Speaker 1 00:47:56
+That's the update on this.
+
+Speaker 2 00:47:57
+Yeah, that was my point.
+
+Speaker 2 00:47:58
+So the story can be.
+
+Speaker 3 00:47:59
+That Yuni was there to.
+
+Speaker 3 00:48:01
+understand what would not be provided and she was okay with that, correct?
+
+Speaker 1 00:48:06
+Yes, she was okay with that.
+
+Speaker 1 00:48:08
+Yeah, and she's going to discuss with Jamie about these things and as a launch of first launch, they will get it removed.
+
+Speaker 2 00:48:17
+Okay.
+
+Speaker 1 00:48:18
+Yeah, I'll follow up with Sanjeev on that group chat if he has any further questions before Jamie jumps on to us and see that it doesn't happen.
+
+Speaker 1 00:48:29
+Yeah, but yeah, for now the story can be closed and expiry date is not in scope of who to provide to for that not matter, not just client center, not to any other consumer as well.
+
+Speaker 3 00:48:40
+Okay, that sounds good.
+
+Speaker 3 00:48:42
+That's okay, yeah.
+
+Speaker 4 00:48:43
+So, as part of this story, we have not done, we have done, right?
+
+Speaker 4 00:48:50
+Yeah, so we have just removed those client level, this one, very clear.
+
+Speaker 4 00:48:56
+Here's what I'm trying to say.
+
+Speaker 4 00:48:57
+Can we get this confirmation before only before like we are taking the story?
+
+Speaker 4 00:49:02
+Because you know we have created this consumption like last two spreads before it for client central to have the activation date, like enrollment activation date.
+
+Speaker 4 00:49:11
+But Amir suggested us to have that expiry date there, right?
+
+Speaker 4 00:49:14
+After that we taken the spike also, right?
+
+Speaker 1 00:49:19
+Yeah, based upon the spike only we got Amrita, because if we didn't know the spike, we would not know that there was no mechanism of
+
+Speaker 1 00:49:27
+fetching the expiry date because even Amir was not aware that we were still hoping that we would get it in the preference API response by adding that our API key under the conflict probably because in the previous consumption we were seeing that we were getting that response.
+
+Speaker 1 00:49:44
+So we wanted to see, we didn't want it to miss the existing functionality if it gives the response or not.
+
+Speaker 1 00:49:49
+So that's the reason we put this spike in place because no one else knew had a, you know, handy answer about it.
+
+Speaker 1 00:49:57
+If we didn't do this, we wouldn't know.
+
+Speaker 1 00:50:00
+Right, but before to please also we had one site for 365 days only, I remember right?
+
+Speaker 1 00:50:06
+We had one site, right?
+
+Speaker 1 00:50:08
+So, maybe like what I'm trying to say, they should discuss it first internally because this is not our expertise, right, Divya?
+
+Speaker 1 00:50:18
+It's to do test.We are so yeah, at least something else because so we would have taken something else.
+
+Speaker 1 00:50:27
+in previous case also.So something like that we have to discuss with like now that next consumption story is also there, right, for plan center.
+
+Speaker 1 00:50:36
+That is not plan center for sales.
+
+Speaker 1 00:50:39
+Our dependency is on like we have like open-ended questions there which we have to discuss there because we don't we have not finalized on that.
+
+Speaker 1 00:50:49
+So something like that we have to work on from the Q2 at least, right?
+
+Speaker 1 00:50:54
+The stories which are really
+
+Speaker 1 00:50:56
+Completely built out completely in our scope, right?
+
+Speaker 1 00:51:00
+We have to pull in those work only, correct?
+
+Speaker 1 00:51:03
+Otherwise, we may have to, if we don't have any stories ready, we have to, we will take other work, other technical work, which is really as like in the scope of organ or something, correct?
+
+Speaker 1 00:51:14
+You have to understood, right?
+
+Speaker 2 00:51:16
+I get it completely from your perspective that we had to do a very minimal work.
+
+Speaker 2 00:51:23
+But for this point of yours, right, I checked with most of the Java folks here.
+
+Speaker 2 00:51:28
+They were also not sure.
+
+Speaker 2 00:51:29
+They wanted some analysis from us to be done.
+
+Speaker 2 00:51:32
+May it be Jyotsna from MLO or may it be Revati or may it be Amir.
+
+Speaker 2 00:51:36
+All of them I did discuss with them, but none of them were sure about it can be.
+
+Speaker 2 00:51:41
+received as a response expiry date.
+
+Speaker 2 00:51:44
+Now that configuration is there, that for that we had to give the service, do some analysis, right?
+
+Speaker 2 00:51:50
+And they didn't have that answer.
+
+Speaker 2 00:51:51
+And if anybody had to get that answer, then it was our team only, which had to co-extend the analysis further and see if the data is coming.
+
+Speaker 2 00:52:02
+I know we are in main distributed background, but we had to do some analysis with some Java help.
+
+Speaker 2 00:52:08
+That is what we did as a part of the spike.
+
+Speaker 2 00:52:10
+And Aamir also helped at a later point of time.
+
+Speaker 2 00:52:12
+And then we concluded that this is not going to happen.
+
+Speaker 2 00:52:15
+But that's the only reason why we pulled it, because nobody knew.
+
+Speaker 2 00:52:19
+It's been three, three plus years when the previous consumption had been given to the previous consumers.
+
+Speaker 2 00:52:26
+So from then to now, the most of the things were changed, right?
+
+Speaker 2 00:52:31
+Yeah, the config.
+
+Speaker 1 00:52:32
+Yeah, we changed, we changed that in production and in North Korea.
+
+Speaker 1 00:52:38
+Yeah.And I'm thinking, let's move that story, right, whatever it is we have, like next story, whatever Nirav is reading, right?
+
+Speaker 1 00:52:50
+I don't think so it can even, because it cannot be tested out until then and just be complete.
+
+Speaker 1 00:52:55
+That's what I've told right at the beginning of the sprint as well, right?
+
+Speaker 2 00:52:59
+This cannot be the consumption, consumption, consumption one, right?
+
+Speaker 1 00:53:03
+Okay, opted in, opted in one, yeah, we have like the...
+
+Speaker 1 00:53:08
+We had a discussion with Hamid.
+
+Speaker 1 00:53:11
+We have some testing yet to be done on this, but because of product issue, it got like sidetracked.
+
+Speaker 1 00:53:17
+So we have to look into this now.
+
+Speaker 1 00:53:20
+So let's see, like tomorrow, myself, Gurga and Krishna will work on this.
+
+Speaker 1 00:53:26
+So I don't think we should get enough time for this for that.
+
+Speaker 2 00:53:29
+Consumption document, right?
+
+Speaker 2 00:53:31
+Can we move that out, Lee, if that's fine, to next sprint, the consumption document one?
+
+Speaker 2 00:53:36
+Anyway, we gave a heads up to Shiva also, right?
+
+Speaker 2 00:53:38
+It is delayed by one sprint.
+
+Speaker 3 00:53:40
+Yeah, I mean, that we don't have time to get it completed.
+
+Speaker 2 00:53:44
+Right.
+
+Speaker 3 00:53:45
+Sure.We want to make sure we fast track the and the next sprints up because they are waiting on it.
+
+Speaker 3 00:53:50
+Yeah, we can move that up.
+
+Speaker 2 00:53:54
+288883, Nirav, if you can move that to next print.
+
+Speaker 4 00:54:00
+Whose story is named one?
+
+Speaker 4 00:54:04
+Two?Sorry.
+
+Speaker 2 00:54:06
+Triple 88883.
+
+Speaker 4 00:54:08
+Three?Yes.Okay.
+
+Speaker 4 00:54:12
+And, okay, this is the one we were ready for development, right?
+
+Speaker 4 00:54:17
+Okay.So, but this will go to, hold on, let me open this.
+
+Speaker 4 00:54:23
+will go to another app, right now.
+
+Speaker 4 00:54:25
+Which one is the haptic?
+
+Speaker 4 00:54:26
+You remember SPWS and SPCS?
+
+Speaker 3 00:54:30
+It's an enrollment, so that one there, D.
+
+Speaker 4 00:54:38
+This is the one.Okay, D, details are presentation.
+
+Speaker 4 00:54:48
+Let's see if it works or not.
+
+Speaker 4 00:54:53
+Yes.
+
+Speaker 1 00:55:00
+This is the one, right?
+
+Speaker 1 00:55:03
+And let's go to next sprint.
+
+Speaker 1 00:55:11
+It's going to be this one.
+
+Speaker 1 00:55:12
+First sprint.
+
+Speaker 2 00:55:15
+This is not the epic, right?
+
+Speaker 2 00:55:18
+This is the epic we are following, but it is exception unenrollment.
+
+Speaker 2 00:55:23
+It will be nonenrollment.
+
+Speaker 2 00:55:27
+Yeah, that's right.Yeah, no, this would be an unenrollment.
+
+Speaker 3 00:55:37
+We don't have two different epics, Amrita, for exception unenrollment or unenrollment.
+
+Speaker 3 00:55:44
+That is elegant enrollment exception.
+
+Speaker 3 00:55:46
+That's altogether it.That's altogether a different epic.
+
+Speaker 3 00:55:49
+And this exception is in under unenrollment flow.
+
+Speaker 3 00:55:53
+the exception which we are doing the consumption right, the 365 opt-in.
+
+Speaker 3 00:55:58
+So that comes under unenrollment, I think.
+
+Speaker 2 00:56:02
+Okay, got it.
+
+Speaker 1 00:56:07
+Okay, yeah, this one is moved out now.
+
+Speaker 1 00:56:11
+I'm gonna just...All right, so...
+
+Speaker 2 00:56:17
+So I got confused.That is okay.
+
+Speaker 2 00:56:26
+And Nero, there is one story on Durga's name.
+
+Speaker 2 00:56:29
+Yeah, Durga's.
+
+Speaker 4 00:56:30
+Let's check Durga's.
+
+Speaker 1 00:56:32
+The last one here.So Durga spike exception involvement.
+
+Speaker 1 00:56:39
+Yeah, this is the one.
+
+Speaker 2 00:56:40
+I think this will be discussed at the 16th minute because we have like some questions for me on this.
+
+Speaker 2 00:56:48
+The below 31866 story production should be.
+
+Speaker 2 00:56:52
+So, Divya, we should be having three pointers here, right?
+
+Speaker 2 00:56:57
+One pointer is not enough for this story at all, correct?
+
+Speaker 2 00:57:00
+We created the SPR, we have done the analysis, right?
+
+Speaker 2 00:57:04
+So many pointers are going out here, right?
+
+Speaker 2 00:57:08
+I thought of we have taken 5 pointers, right?
+
+Speaker 2 00:57:10
+But maybe QA efforts are like moved on, so that's why we are saying...
+
+Speaker 3 00:57:13
+No, This is, I think you were off right.
+
+Speaker 3 00:57:17
+You do not have much update.
+
+Speaker 3 00:57:19
+I don't know how much Durga updated you.
+
+Speaker 3 00:57:20
+So we wanted just the approach of SPR, not a dev complete on this arguing.
+
+Speaker 3 00:57:27
+That is what I asked the other thing, because any mainframe change needs to go through LG approval.
+
+Speaker 3 00:57:33
+So first is approach and LG approval, it is a pause for no further doing debit coding unless and until there is no other option.
+
+Speaker 3 00:57:43
+So there is another option which they proposed, Masood proposed in the LG meeting was, can the enrollment and cancellation do parallelly get the TBA approvals on that?
+
+Speaker 3 00:57:54
+So myself, Ahmed and Siv met with a TBA after LG point and TBA has no concerns in executing this enrollment and cancellation together.
+
+Speaker 3 00:58:05
+But however, there was another proposal, there was an option, option two as well proposed by Masood saying,
+
+Speaker 3 00:58:12
+If there is a sequential parallel process, which I'm not really sure on that approach, I'm going to meet Amir today and discuss further steps on that.
+
+Speaker 3 00:58:26
+So we cannot proceed with the development of QA of any SPR version.
+
+Speaker 3 00:58:33
+It's just that we propose that this can be done together in the LG as a proposal.
+
+Speaker 3 00:58:38
+But we cannot do the Devon QA until we the method or the options is confirmed actually, right, but to...
+
+Speaker 2 00:58:49
+Reach that approach, right?
+
+Speaker 2 00:58:51
+We have to figure out which layer we should create, at least at the higher level.
+
+Speaker 2 00:58:55
+If you have seen that document created by myself and Gurkha, right?
+
+Speaker 2 00:58:58
+There was so much analysis and we have checked the spot card because we can't go to three take forum blind, right?
+
+Speaker 2 00:59:06
+I will propose a solution and if it cannot be implemented, that would be a problem.
+
+Speaker 2 00:59:10
+Who would have done a lot of homework on this, so for that I'm saying we need the three pointers, like this is not enough.
+
+Speaker 3 00:59:18
+Yeah, that should be okay.
+
+Speaker 2 00:59:20
+Maybe it should be okay.
+
+Speaker 2 00:59:22
+We can take like, as you suggested, right, the second approach or something.
+
+Speaker 2 00:59:26
+If we need, we can take that even queue with the latter, but for me, we can help you, right?
+
+Speaker 3 00:59:32
+Yes, yeah, I do agree.There are some efforts from my end also, which went on this.
+
+Speaker 3 00:59:37
+Yeah, I'll have just one of your hours, guys.
+
+Speaker 4 00:59:41
+Yeah, so 18 hours cannot justify three points.
+
+Speaker 4 00:59:45
+I'm putting three points right now, but one of your hours, right?
+
+Speaker 4 00:59:47
+Because I see this, Divya, yours left, yeah, the last 50% left, right.
+
+Speaker 3 00:59:54
+So, yeah, so just make sure, Amrita, there has to be no QA efforts for now.
+
+Speaker 1 01:00:00
+It's just that a high-level dev approach provided.
+
+Speaker 1 01:00:04
+So no QA will be there for this year.
+
+Speaker 1 01:00:07
+And a quick update.Today I might set up a call and I might call, invite, send an invite also after my discussion with Amit for the final approach, what we can proceed with mass enrollments.
+
+Speaker 1 01:00:21
+Okay, yeah, let's go.Yeah, because we met with the DBA and we have a way path forward.
+
+Speaker 1 01:00:28
+They are okay because they say that the targets are same, but the orders which we activate and we enroll and the cancellation happens, the orders are different.
+
+Speaker 1 01:00:36
+So they don't seem to have any concern in executing enrollment and cancellation hardly.
+
+Speaker 1 01:00:43
+But we have to have a, we need a confirmation from LG before we proceed because we do not know again if this situation in production will not.
+
+Speaker 1 01:00:53
+occur.The reason being we cannot replicate the same situation in non-prod because the drive events, situations and all wouldn't be there.
+
+Speaker 1 01:01:04
+So yeah, that's what we want to just mention to our architects in that direction.
+
+Speaker 2 01:01:10
+Yeah, sounds like a plan we want to get that approval as soon as we can so we can continue moving on and clean up work.
+
+Speaker 1 01:01:19
+Yes, yeah.
+
+Speaker 3 01:01:21
+Okay, guys, so we can start the parking yard items, okay?
+
+Speaker 3 01:01:27
+And the next sprint we have our capacity of twenty-five, twenty-six, let's say we can say about twenty-six story point twenty-nine on the board right now, plus that couple of QS2 is gonna come up, right?
+
+Speaker 3 01:01:41
+So, I guess start working on that, but tomorrow we definitely need to go into a little bit of refinement and...
+
+Speaker 3 01:01:50
+make sure this sprint is ready.
+
+Speaker 3 01:01:53
+So yeah, I'll say we can go ahead in the parking lot now.
+
+Speaker 3 01:01:57
+I'm gonna be stop sharing.
+
+Speaker 1 01:01:59
+Yeah, I can share my screen.
+
+Speaker 1 01:02:03
+Let me quickly share my screen.
+
+Speaker 1 01:02:07
+Yeah, Lee and team, are you able to see my screen?
+
+Speaker 3 01:02:12
+Yeah.
+
+Speaker 1 01:02:13
+So Lee, we wanted to all be in the same page.
+
+Speaker 1 01:02:19
+So we want to discuss about that, the main story of the control, how to control an enrollment flow, right?
+
+Speaker 1 01:02:28
+So from the beginning, I'm just going through all the business use case we have and how this initial setup has been there.
+
+Speaker 1 01:02:37
+So the team can stop me and you also.
+
+Speaker 1 01:02:40
+A PAU can also stop me.
+
+Speaker 1 01:02:42
+So for the enrollment flow, basically there are three control parameters at the moment.
+
+Speaker 1 01:02:47
+However, we discussed because we have the PAU parameters which limit us, there is a system limitation of how we do the core offer moment.
+
+Speaker 1 01:02:56
+So definitely we always had a limit control to the unenrollment flow.
+
+Speaker 1 01:03:01
+It was never just the tier or not just the asset, but
+
+Speaker 1 01:03:07
+Once we learn from the business, they also need a tier control and also the tier meaning for us it was mostly a combination of both limit and tier and we also added this asset control and this asset control is just one asset which is going to have we which is which will be same across all retail tiers.
+
+Speaker 1 01:03:30
+That is SPWS, SPCS or plans.
+
+Speaker 1 01:03:35
+Let's say if we do.10 here and give asset, then it is going to take care of 10 SPWS, which is less than 10K, which has gone, not gone through the reevaluation for past two years, and which is still in the SPWS tier and having asset value sitting at less than 10K.
+
+Speaker 1 01:03:54
+And if we do give 10 PCS,
+
+Speaker 1 01:03:56
+10 households to be processed, which is less than, and so on.
+
+Speaker 1 01:04:00
+So the configuration is not different for assets, meaning SPWS, SPCS, Black, Golden Pref, it is going to be same.
+
+Speaker 1 01:04:09
+That is one single asset control across different tiers, and also there is a limit.
+
+Speaker 1 01:04:15
+Now, any questions or any add-ons team?
+
+Speaker 1 01:04:20
+I'll take a pause here.
+
+Speaker 4 01:04:20
+I remember in the last discussion we talked about no limits, correct?
+
+Speaker 4 01:04:27
+But today again we are talking about the limits.
+
+Speaker 1 01:04:31
+No, One second.I'm just going through a general flow.
+
+Speaker 1 01:04:38
+The method what is proposed, I'm going to describe that later.
+
+Speaker 1 01:04:45
+This is the general flow how this was initially built.
+
+Speaker 1 01:04:48
+That is the flow here.This is not the conclusion.
+
+Speaker 1 01:04:50
+Don't go by conclusion.
+
+Speaker 1 01:04:52
+So this is just to resolve all our requirement confusions, how it is initially set up.
+
+Speaker 1 01:05:00
+how it is going to be.And the flow of the unenrollment is 365 days complete, and then 90 days grace period enrollment, and then actual enrollment.
+
+Speaker 1 01:05:11
+So till here, this is a generic flow, what we had till now with our understanding.
+
+Speaker 1 01:05:16
+So now the business use case for the first run of the month is meaning by, let's say that is an
+
+Speaker 1 01:05:26
+tier control and there is also a threshold control.
+
+Speaker 1 01:05:30
+That's it for 90 days grace period enrollment when 365 days is complete.
+
+Speaker 1 01:05:37
+OK, so this is the very first use case for the first month when any given household can get into an enrollment.
+
+Speaker 1 01:05:52
+Here there is no limit.
+
+Speaker 1 01:05:55
+coming into place.So whichever households are less than threshold 10K and we have a tier control, either we say it as SPCS or SPWS, then we have to enroll into 1426.
+
+Speaker 2 01:06:10
+Correct.Yep.
+
+Speaker 3 01:06:15
+Yeah.
+
+Speaker 1 01:06:15
+Greeting.Any confusions now?
+
+Speaker 1 01:06:19
+And here there is no limit coming into the picture.
+
+Speaker 1 01:06:23
+It is just tier and it is just a set.
+
+Speaker 1 01:06:30
+May it be 60K, may it be 1 million, may it be whatever population gets into this, everything will get unenrolled, sorry, enrolled into 1426.
+
+Speaker 1 01:06:46
+So this is the very first home business use case.
+
+Speaker 2 01:06:49
+So give you one question.
+
+Speaker 2 01:06:53
+So you are saying that for 1426 enrollment, we should have the threshold, let's say if the limit is given less than 10K, but then only we'll enroll to 1426 enrollment.
+
+Speaker 2 01:07:07
+So we will not check the conditions also, right?
+
+Speaker 2 01:07:09
+So whatever the conditions were there.
+
+Speaker 1 01:07:11
+Conditions, you mean what conditions?
+
+Speaker 1 01:07:14
+It's...
+
+Speaker 2 01:07:14
+If you remember that earlier, we were having the...
+
+Speaker 2 01:07:19
+10% of the net withdrawal, as well as 12 month average, those conditions, I think you said?
+
+Speaker 3 01:07:27
+Yeah, I mean, you go ahead and evaluate.
+
+Speaker 3 01:07:31
+I'm sorry.So by definition here, these do not, they won't qualify, but we should not put any separate code in there to skip that here, which is just evaluate it, right?
+
+Speaker 3 01:07:47
+And we'll see that it will not qualify.
+
+Speaker 3 01:07:49
+and it will go into the 1426 90-day grace period enrollment.
+
+Speaker 3 01:07:53
+Does that make sense?Because the value is so low, we know it's going to, it would trigger an enrollment there.
+
+Speaker 3 01:08:02
+So we would just cut the threshold for the asset value here, because it's going to be so low, is automatically going to tell us that they don't qualify.
+
+Speaker 3 01:08:18
+But in future runs, whenever we take away that asset restriction, less than 10K, we're going to use that logic anyway.
+
+Speaker 3 01:08:28
+So we shouldn't change anything and let that logic go ahead and fire.
+
+Speaker 3 01:08:33
+Does that make sense?
+
+Speaker 2 01:08:40
+Yeah, OK.
+
+Speaker 1 01:08:41
+Yeah.Any other questions, any other doubts, didn't call out right away if there is any other questions which you don't agree or anything added.
+
+Speaker 1 01:08:54
+This is an example given and these are the only two controls to enroll which has eligibility for to be get into 1426 offer.
+
+Speaker 4 01:09:05
+Where is the policy we just talked about earlier?
+
+Speaker 4 01:09:12
+That limit count for on Windows, no, but now you're introducing a check count, but the check control, but where is that limit count which was proposed?
+
+Speaker 1 01:09:24
+Okay, so the limit was always in part of our design, the reason being the PAU always has that limitation.
+
+Speaker 1 01:09:41
+But in case of bundled offer, now what previously we discussed was we have this limit on, let's say, 10 households of SPCS only to get into an enrollment.
+
+Speaker 1 01:09:54
+Only 10 households in SPCS would also get enrolled into 1426 on one.
+
+Speaker 1 01:10:00
+But now by saying what Lee is saying is, since it's a no event processing is going to happen at 1426, and if there is a population of 60K who have asset less than 10K dollars, let be SPCS, let's enroll all of them.
+
+Speaker 1 01:10:22
+with only these control parameters and no limit set on them of 10K given 1426, let's give all 60K.
+
+Speaker 1 01:10:30
+If there is a population of 50K, which is going to be a backlog on month three, then so it will be, we will do a one time mass unenrollment because PAU cannot handle.
+
+Speaker 2 01:10:44
+So Vivian, I have one question.
+
+Speaker 2 01:10:49
+I understood what you are saying, correct?
+
+Speaker 2 01:10:51
+So, as Pratap Amit Kamath, right, we currently what we are doing, customer flow is correct, but we have that average monthly income set threshold or last say something like that there is that average threshold and the free value we are getting from the CAT file.
+
+Speaker 2 01:11:09
+That we are taking and since any of these values is not eligible as per our functionality, as per our EBC logic, then it is like we are...
+
+Speaker 2 01:11:20
+Sending it further for the 1426 or 365 enrollment and enrollment in evaluation, so that logic is not going to change.
+
+Speaker 2 01:11:30
+We will be saying those values for sixty-five days and 1426 enrollment, but for six enrollment again, we will check again out of that and whatever we volume we got for the six to the 4WS, how many are having less than 10K and those only will get enrolled in the 1426, correct?
+
+Speaker 1 01:11:50
+Exactly.Okay.Yeah, go ahead.
+
+Speaker 1 01:11:54
+The only thing is there is no limit control for 1426 that has been a number.
+
+Speaker 1 01:12:01
+The only two controls are that is neither give you say process SPCS and we say that aggregate of threshold of monthly QPC file checks, right?
+
+Speaker 1 01:12:13
+That field, the retail field, is less than 10K.
+
+Speaker 1 01:12:17
+Then only we do.and successful enrollment of work 426 and we allow those clients to stay there in for month two and month three and this population can be really high.
+
+Speaker 1 01:12:29
+That's that we know that we accept that as a fact.
+
+Speaker 1 01:12:32
+Yeah.And our BAU will not be able to handle that enrollment on month three, month two and month two, they will go under the reevaluation, reevaluation meaning if they qualify back to be in the same tier.
+
+Speaker 1 01:12:48
+that the this is going to get cancelled in month two and month three, but we qualify and put back into the same tier.
+
+Speaker 1 01:12:56
+This is our business next use case.
+
+Speaker 1 01:13:01
+Let's let me call it out.
+
+Speaker 1 01:13:03
+Yeah, use case two.
+
+Speaker 3 01:13:05
+Yeah, sorry.Just one more question.
+
+Speaker 3 01:13:09
+Now on that use case one, I have one question.
+
+Speaker 3 01:13:14
+Let's say.uh the 365 days is completed and we are checking the asset of less than uh 10k only but uh he's having uh let's say uh uh 100k so in that case we will be ignoring uh uh that household from enrolling to 1426 correct.
+
+Speaker 1 01:13:33
+Correct yes because it doesn't match this this criteria that's right.
+
+Speaker 3 01:13:39
+So uh then again next month are we trying to increase the asset to uh
+
+Speaker 3 01:13:44
+So, more than 100K or less than equals to 100K, so that goes all will come.
+
+Speaker 1 01:13:51
+Yeah, that is our, yeah, that is our phase by phase on enrollment plan.
+
+Speaker 1 01:13:56
+That will be a parse file or plan one intervention anyway will be there to control this as per business need.
+
+Speaker 4 01:14:02
+Okay, yeah, and the way that we're talking about it, phases one and two is where we're going to target a specific.
+
+Speaker 4 01:14:14
+tier and whatever that specific asset value is.
+
+Speaker 4 01:14:19
+Once we get to phase three, though, which will be the third month run, the idea is we would treat it as business as usual.
+
+Speaker 4 01:14:32
+Obviously, we get to look at all of the volumes that we will be encountering then, but that's the plan that we'll do.
+
+Speaker 4 01:14:41
+SPCS less than 10K, I think is what we're looking at now for month one, then we'd say SPS less than maybe 100K, and then potentially for phase three, we would take away that asset value and let the job run against any of the households that would.
+
+Speaker 1 01:15:00
+potentially not qualify for their current tier.
+
+Speaker 2 01:15:04
+Absolutely, as Vivya mentioned, right, we have we are maintaining currently only one value in our controller that in consideration for the all the on the all tiers across all the tiers as well as for 146 enrollment.
+
+Speaker 2 01:15:23
+That is OP or you are expecting to have a different asset range
+
+Speaker 2 01:15:28
+Control or configuration for each tier and one for two.
+
+Speaker 2 01:15:33
+Because I just wanted to know how it will be done like latter phase two or phase three.
+
+Speaker 1 01:15:39
+So phase one would be only SPCS and some asset value.
+
+Speaker 1 01:15:44
+We're still going to, we're still working on what that is.
+
+Speaker 1 01:15:46
+Phase two would be the month two would be SPWS and an asset dollar value.
+
+Speaker 1 01:15:55
+Correct.Not all tiers.
+
+Speaker 2 01:15:58
+Right, OK, right, that is OK, correct.
+
+Speaker 3 01:16:04
+Yes, that's what I'm thinking, because at the time we are going with one tier, and even if we have to switch on 2 tiers, then it would also follow the same asset control, I mean, less than, which is perfect, right?
+
+Speaker 1 01:16:18
+If that's if they if they've changed their mind and say, Oh, for phase two, let's do both SPWS and SPCS less than 100K because of what the volume looks like.
+
+Speaker 1 01:16:28
+We want to do that.
+
+Speaker 3 01:16:29
+Yeah.And if they ask there has to be a difference threshold, then that is going to be an additional dev work because at the moment we only have one asset control for all the tiers.
+
+Speaker 1 01:16:40
+Yeah.that's okay though.
+
+Speaker 3 01:16:43
+Okay.So moving forward to the business use case two, that is we have passed the one month and we have done the, given the clients.
+
+Speaker 3 01:16:55
+a grace period.Now, whoever have come into the path of this fallen into this criteria, we have done the 1426.
+
+Speaker 3 01:17:06
+We allow those clients to re-qualify for month two and month three and also for that matter even month one after the enrollment.
+
+Speaker 3 01:17:18
+So at the end of month three,
+
+Speaker 3 01:17:21
+If they are going to re-qualify, we are going to put back into the same tier that is SPCS at 1426.
+
+Speaker 3 01:17:28
+So when the cancellation would happen, that would be on month 4th of second day.
+
+Speaker 3 01:17:35
+That is when this unenrollment job is going to be scheduled.
+
+Speaker 3 01:17:39
+So even on that particular day before we unenrolled or to actual unenrollment, we would still look at if household is going to
+
+Speaker 3 01:17:50
+Requalify if they do not, that qualification is anyway based upon the QBC rules that is about 10 million for SPWS, 1,000,000 to 10 million for SPCS.
+
+Speaker 3 01:18:04
+If not, then down tier to lower lower tiers.
+
+Speaker 3 01:18:17
+The lower tiers can be SPCS or that.
+
+Speaker 3 01:18:23
+Gold and REF, because it will down tier from SPWS to either SPCS or SPCS to Plant Gold and REF, and now the comes are limiting to our picture, which control parameters, so here the enrollment is...
+
+Speaker 3 01:18:43
+The un-enrollment first business check is already done of which one has to get into 1426.
+
+Speaker 3 01:18:50
+It has already passed this phase, meaning that we have already done these two checks for those households, either SPCS or less than 10K.
+
+Speaker 3 01:18:57
+So here we do not do the checks again.
+
+Speaker 3 01:19:01
+We just say that whichever has completed 1426.
+
+Speaker 3 01:19:05
+Complete and before this we have also seen that 365 is already complete.
+
+Speaker 3 01:19:13
+And then our limit comes to a picture on the actual unenrollment.
+
+Speaker 3 01:19:22
+A limit of SPCS 10K.This is the BEU limit which is going to get down tiered and now this is.
+
+Speaker 3 01:19:43
+Limit is the tech team to do the analysis and come up with what could be.
+
+Speaker 1 01:20:00
+the limits given here because on day on 4th month 4th second day is the day of unenrollment meaning the unenrollment also needs to be handled by our enrollment process that is our successful job and also the actual enrollments which is going to be
+
+Speaker 1 01:20:25
+in place on that particular day.
+
+Speaker 1 01:20:27
+So there will be an addition to the enrollment population on the day of unenrollment.
+
+Speaker 1 01:20:35
+So this is something limits that we would define.
+
+Speaker 1 01:20:38
+Checking, a couple of analysis is needed here that how much enrollments limits can be increased to accommodate unenrollment flow as well for that day.
+
+Speaker 1 01:20:50
+because we have that logic built, successor job, we are going to do that.
+
+Speaker 1 01:20:57
+And that's how we have designed this so that it's not recoded in our enrollment, the same logic, the same process run.
+
+Speaker 1 01:21:06
+So this is where the limit comes into our picture, that how much can an SPCS or SPWS can be actually down tiered.
+
+Speaker 1 01:21:14
+And whichever is in backlog, it's already called out, the backlog is going to be.
+
+Speaker 1 01:21:19
+One time mass unenrollment.
+
+Speaker 1 01:21:21
+And this unenrollment will be an SPR, which will include both unenrollment jobs and as well as enrollment job.
+
+Speaker 1 01:21:36
+Yeah, any questions here?
+
+Speaker 2 01:21:44
+We have to do the 1426 enrollment, right, Divya.
+
+Speaker 1 01:21:49
+Correct.That is this already done here.
+
+Speaker 1 01:21:52
+That is 50K backlog.Consider 50K backlog will also already be there here.
+
+Speaker 1 01:21:58
+At the time of month one, because we don't have a limit for giving it this bundled offer, everything in 60K will get enrolled.
+
+Speaker 1 01:22:08
+But on month four, on day second, every single client in the 60K will qualify to they don't put their asset back.
+
+Speaker 1 01:22:16
+Maybe not all 100%, but at least 80% of population.
+
+Speaker 1 01:22:21
+So that an enrollment of household and then followed by enrollment jobs.
+
+Speaker 1 01:22:29
+That way, but that we have to look how we can get that SPR ready.
+
+Speaker 1 01:22:35
+So the limit control is here.
+
+Speaker 2 01:22:38
+So after month, month 4th you are saying, right?
+
+Speaker 2 01:22:42
+Backlog should be cleaned up after month 4th, correct?
+
+Speaker 1 01:22:45
+Yes, the day the one expires.
+
+Speaker 1 01:22:50
+or post them.But there will be a gap of those because we have there will be a gap even 1426 completes at least 2-3 days gap will be there when we do actual unit.
+
+Speaker 1 01:23:03
+They would have passed that phase.
+
+Speaker 2 01:23:04
+Correct.But this type of backlog we need to clear when we are changing this range also, right?
+
+Speaker 2 01:23:13
+Maybe for 10K we got 60,000 but for STCS we may have 25,000 for STWS, correct?
+
+Speaker 2 01:23:19
+That's all we have to see when we are doing the backlog cleanup, right?
+
+Speaker 2 01:23:25
+Otherwise, we have to stay moving on things frequently on a regular basis, as we like enable the correct means, for instance, correct?
+
+Speaker 2 01:23:37
+So, we have to regularize it, yes, just the right for how we are doing, yeah, we'll.
+
+Speaker 3 01:23:44
+Have to monitor that for the first few months.
+
+Speaker 3 01:23:48
+because there's going to be a big spike.
+
+Speaker 3 01:23:51
+So many households were enrolled around the same time and they've all already passed or a lot already passed the 365 day window.
+
+Speaker 3 01:23:59
+So in the very beginning we're going because it's going to be too volume and at some point we'll see that levels out and we'll have to try to
+
+Speaker 3 01:24:20
+We'll start to see maybe a better pattern of what BAU is once we get past all of those ones that we did mass enrollments on.
+
+Speaker 3 01:24:32
+But in the early days, we're going to have to monitor it like this and be ready to schedule that SBR to do the extra volume because it's going to be pretty high.
+
+Speaker 2 01:24:42
+Yes, okay.Yeah.So, now we have discussed this one have LLT, because I'm not aware if we have LLT for PRODX fifty-four or monthly.
+
+Speaker 1 01:25:00
+Can we update like this one there?
+
+Speaker 1 01:25:02
+It would be like we should not repeat this discussion again, right?
+
+Speaker 1 01:25:08
+It should be documented somewhere in confluence.
+
+Speaker 1 01:25:10
+So we will be knowing that was the baseline version of this requirement and we whatever extra is coming, which is just that what I want, right?
+
+Speaker 1 01:25:18
+We will keep updating this.
+
+Speaker 2 01:25:20
+Yeah, we do have an early page.
+
+Speaker 2 01:25:22
+I can update this business.
+
+Speaker 2 01:25:24
+Maybe I'll just format when I have time later today.
+
+Speaker 2 01:25:27
+and just add these things there if that will, that is, if that works for the team.
+
+Speaker 2 01:25:32
+But I just call it out now if there is still any confusion on the limits because we don't want to go again to and fro with the same thing.
+
+Speaker 2 01:25:40
+But definitely we always had a limit control in our plan.
+
+Speaker 2 01:25:44
+It's there.Then enrollment always had a limit control.
+
+Speaker 2 01:25:47
+But at what point we should not and what point we should have fusion here.
+
+Speaker 2 01:25:52
+So now I have split it into three different base cases.
+
+Speaker 2 01:25:56
+So I hope it is much, much better to sort out where the limits has been applied.
+
+Speaker 1 01:26:05
+Yes, correct.Because it was 1426 neighbor was considered under the living initially.
+
+Speaker 1 01:26:12
+So that's why we had this gap, understanding gap there or communication gap.
+
+Speaker 1 01:26:18
+But what my concern is, right, we might come back with the question because when we are trying to do this infinite, we may have like some technical
+
+Speaker 1 01:26:27
+questions which is like with the functional changes or maybe so that means it will not we will not have questions but we but I hope Pritam is not there but and Pratap and Anares you understood right?
+
+Speaker 1 01:26:47
+Maybe we can discuss it tomorrow in offshore time offline and if we have something we can discuss offline.
+
+Speaker 1 01:26:54
+Is it fine team?
+
+Speaker 3 01:26:55
+Yeah, but before that, I have one question.
+
+Speaker 3 01:27:03
+So, on the business use case two, you are saying that month two and month three, so if there is any qualification, we will enroll back to the same tier and we will cancel the 1426.
+
+Speaker 3 01:27:17
+So, cancellation, but cancellation of 142 that we will be doing on the same day or?
+
+Speaker 3 01:27:24
+Are you saying that we will be going and doing it on the month for the second day?
+
+Speaker 2 01:27:29
+No, If it re-qualifies today, if for example, I am in a, I was in SPWS and I added today again back, I mean, till yesterday it went, my asset balance was let's say 7 million.
+
+Speaker 2 01:27:45
+I added one of my family member, my household did.
+
+Speaker 2 01:27:49
+If it got increased to greater than 10 billion, then I want myself to be given SPWS from today.
+
+Speaker 2 01:27:55
+Remove the case period today.
+
+Speaker 4 01:27:58
+That's on the daily job though, right?
+
+Speaker 2 01:28:01
+Yeah, that's a daily job.
+
+Speaker 1 01:28:02
+Yeah, that's what I thought.
+
+Speaker 1 01:28:05
+It was already accommodated in the daily job, but I failed the 90 days grace period lodged.
+
+Speaker 1 01:28:09
+The recognition I had.Added technology, right?
+
+Speaker 1 01:28:18
+So it is already in daily job.
+
+Speaker 1 01:28:20
+That's that's it.Add to horribution is being done daily on daily basis.
+
+Speaker 1 01:28:30
+Only 1426 enrollment is being done on monthly basis, but cancellation is being done on daily.
+
+Speaker 2 01:28:36
+Exactly.That's what we want because we don't want to wait.
+
+Speaker 2 01:28:42
+Any client, once they have increased their balance in that 90 days, we don't want them to wait until month end to be put.
+
+Speaker 1 01:30:00
+What do you want, right?
+
+Speaker 1 01:31:24
+Or any other thing?Did I do with you?
+
+Speaker 2 01:31:27
+I didn't quite follow the Pritam's scenario.
+
+Speaker 2 01:31:31
+If you want to take an example and share your screen, maybe that will be helpful, Pritam.
+
+Speaker 3 01:31:35
+No, you are saying right.
+
+Speaker 3 01:31:39
+What do you want on enrollment households we're getting?
+
+Speaker 3 01:31:45
+So you're saying that those we need to manage as a households also, correct?
+
+Speaker 2 01:31:51
+Yeah, they need to go follow the revaluation logic.
+
+Speaker 2 01:31:54
+If we need to tell the job it's a day of unenrollment because we are using two different jobs.
+
+Speaker 2 01:32:00
+First is to first which is going to identify it's a month 4th day.
+
+Speaker 2 01:32:05
+That means a client has crossed the 90 days.
+
+Speaker 2 01:32:08
+Grace period also his household is going to unenroll all those clients and accounts the successor job enrollment job need to rectify that this is an unenrollment day and the households have to be has to go through reevaluation process and this is not something that CAT team will tell us as an MC candidate and this is not something that.
+
+Speaker 2 01:32:36
+We would manually do any activity.
+
+Speaker 2 01:32:39
+This is an enrollment process, and how we design this flow.
+
+Speaker 1 01:32:44
+So, whatever output is coming from monthly job for an enrollment, so we have to create a five-day unenrollment job.
+
+Speaker 1 01:32:54
+So have a MC flag Y, that 281 position or something, right?
+
+Speaker 1 01:33:00
+At that time we feed it to PRO 654 with the additional file.
+
+Speaker 1 01:33:03
+If that file is empty, we don't have to worry.
+
+Speaker 1 01:33:06
+But if it is not empty, then our cache file and this monthly file should get merged together.
+
+Speaker 1 01:33:12
+Correct, Sriviya?That's what you are saying.
+
+Speaker 2 01:33:14
+Yeah.And we can have a flag set basis that to identify if it's an anti of an enrollment.
+
+Speaker 2 01:33:21
+Merge these households into our MC candidates, and if it's a regular day, go by whatever just can sense as an MC guys.
+
+Speaker 2 01:33:31
+And we can think through that tech solutions, Amruta and team.
+
+Speaker 2 01:33:36
+Later we can think about that, but this is what is expected from the business.
+
+Speaker 1 01:33:42
+OK, so maybe we have to prepare that.
+
+Speaker 1 01:33:46
+Also, maybe you have to discuss with Hamir as well, because this is something additional changes needed in our.
+
+Speaker 2 01:33:52
+Yes, and even the control limit also, Amrita, like right now we have on the month, 4th, second day, we just know that the actual enrollments as is today, which is coming in, has a limit of 10K.
+
+Speaker 2 01:34:07
+But addition to unenrollment on that day, there will be other load.
+
+Speaker 2 01:34:11
+So that limit, all these things have to, that flow has to be, anyway, we have to derive a tech solution for that.
+
+Speaker 2 01:34:19
+how to coordinate both the jobs together.
+
+Speaker 2 01:34:24
+This is like an end-like scenario for the unenrollment field.
+
+Speaker 2 01:34:28
+Okay, I think we are almost, most of the time we covered.
+
+Speaker 2 01:34:38
+Any further questions for Lee and for team?
+
+Speaker 2 01:34:44
+I'll add this to our LLT and share the link to all of you.
+
+Speaker 1 01:34:50
+Yeah, it's even, but I just don't want it, because it is already 20 minutes late, right?
+
+Speaker 1 01:35:00
+Maybe we can discuss tomorrow, Lee.
+
+Speaker 1 01:35:01
+But thank you.Thank you for clarifying our doubts in the end again.
+
+Speaker 1 01:35:05
+Thanks A lot.
+
+Speaker 2 01:35:06
+Yeah, I was just going to say this.
+
+Speaker 2 01:35:08
+I really appreciate you all inspecting these requirements, right?
+
+Speaker 2 01:35:11
+And I went back and looked at the original spike to come up with how we're going to do this configuration.
+
+Speaker 2 01:35:18
+And I was not explicit that it was for enrollment of the 90-day grace period.
+
+Speaker 2 01:35:24
+So I could see confusion from that right out of the gate.
+
+Speaker 2 01:35:27
+So my apologies for that.
+
+Speaker 2 01:35:29
+It's complicated.There's so many different angles we have to look at this and unfortunately it just took us some time to get through it all.
+
+Speaker 2 01:35:39
+So appreciate your patience and always your questions make us be better and we bring things back to the business all the time that they're not even thinking about.
+
+Speaker 2 01:35:51
+So sorry it just felt a little painful, but hopefully we're getting to a good spot and
+
+Speaker 2 01:35:56
+we all understand it better today than we did even last week.
+
+Speaker 2 01:36:01
+So again, thank you for continuing to come back with really good questions.
+
+Speaker 3 01:36:06
+Yeah.
+
+Speaker 1 01:36:09
+Sure, Lee.Thank you for your information.
+
+Speaker 3 01:36:12
+Yeah, thanks.Thank you all.
+
+Speaker 3 01:36:15
+Maybe Lee we can catch up later for the refinement so that we can speed up tomorrow morning if you have some time.
+
+Speaker 2 01:36:22
+Yeah, let's do that.Let me know when you're available.
+
+Speaker 2 01:36:25
+I have some open time on my calendar today.
+
+Speaker 2 01:36:28
+We can get together.
+
+Speaker 3 01:36:29
+Yeah, sure.We can do that.
+
+Speaker 3 01:36:31
+Yeah.All right.Yeah, we'll keep you posted on the mass enrollment thing.
+
+Speaker 3 01:36:36
+I'll let you know.
+
+Speaker 2 01:36:37
+Okay.Sounds good.Have a great rest of your day, everyone.
+
+Speaker 2 01:36:41
+I'll talk to you again tomorrow.
+
+Speaker 3 01:36:42
+Bye-bye.Yeah.Thanks, everyone.
+
+Speaker 3 01:36:44
+Bye-bye.
+
