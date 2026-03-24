@@ -1,0 +1,54 @@
+Standard recording 52
+3/23 18:45 ｜ 01:37:07
+Meeting Date: 2026/03/23 13:15 - 2026/03/23 14:53
+Meeting Location: 
+Attendees: Speaker 1, Speaker 2, Speaker 3, Speaker 4
+Meeting Agenda and key Content
+Agenda Overview:
+Reviewing record format and file certification.
+Discussing 500 response codes in enrollment inquiry.
+Addressing consumption document details for contract test cases.
+Updating on current sprint stories, blockers, and Q2 planning.
+Discussing ES3 integration, production setup, and security credentials.
+Reviewing deployment stories and sign-offs.
+Discussing contract test cases and evaluation automation.
+Updating on exception enrollment and 365-day expiry date.
+Key Points:
+File Format Certification:
+The team needs to verify the record format of consumption documents, specifically for EDG and EDG rows, checking one or two records for correctness and record length.
+Comparison with non-production files and consumption documents will complete the file format certification.
+Enrollment Inquiry 500 Response Code:
+There was a discussion regarding the 500 response code for enrollment inquiries, with some team members observing it while others expected a 404 for non-existent resources.
+The team decided to clarify with Subba from CST whether this use case is relevant for the consumption document, as it might not be required by consumers.
+Consumption Document for Contract Test Cases:
+The team discussed which fields in the response (e.g., ID, resource key, target) are consumed by the consumer for contract test cases.
+It was noted that the target and product resource key are crucial for consumers to identify which household a product is active for.
+Sprint Progress and Blockers:
+Scheduling Monthly Job on Enrollment: Dalip is awaiting a response from the team regarding this story.
+ES3 Integration and Configuration Control Card: The team is coordinating with the ES3 team for setup and testing, but production setup is not yet ready due to security and access key issues.
+Production Access and Credentials: The ES3 production path, access key, and secret key are confidential and will be provided by the Save team directly to developers.
+Deployment Mismatch and Flex Decommission: The deployment story is awaiting confirmation from the Flex team regarding successful consumption of the weekly unload file.
+Contract Test Cases and Evaluation Automation: Pritam has completed contract test cases and evaluation automation, with a pending question about using accelerators.
+Exception Enrollment and 365-Day Expiry Date: The exception enrollment part is complete, but the enrollment API consumption is dependent on a spike story. The client central team confirmed that client details are not needed on the UI for the 365-day expiry date.
+Job Failure for Prod 800 Part Two: The job failure was due to a parse file issue, which has been resolved. The story will remain open for monitoring until at least two more successful daily runs.
+Controversial:
+The 500 response code for enrollment inquiry was a point of contention, with differing observations and expectations regarding the appropriate response for cancelled or non-existent enrollments.
+There was a discussion about whether the ES3 production package can be built without having the access key and secret key, with some suggesting overriding control cards for testing.
+Resolutions and Action Items
+Action Items:
+Pritam:
+Verify the record format of consumption documents for EDG and EDG rows, checking one or two records for correctness and record length.
+Compare with non-production files and consumption documents to complete the file format certification.
+Add certification details, including screenshots, to the Confluence page.
+Complete the evaluation automation job by tomorrow.
+Divya: Provide confirmation on contract test cases by today.
+Amrita:
+Send an email to the Flex team to confirm successful consumption of the weekly unload file.
+Attach the confirmation email to the deployment story.
+Dalip: Follow up with the team regarding the scheduling monthly job on enrollment.
+Pratap: Prepare to demo ES3 counting and related stories.
+Subba (from CST): Clarify whether the 500 response code use case for enrollment inquiry is required for the consumption document.
+Shankar: Route any further requests regarding job failure for prod 800 part two to Lee.
+Lee: Have a conversation with the Save team about opening an FDR if issues with job failure for prod 800 part two continue to arise.
+Meeting Summary
+The meeting focused on verifying consumption document record formats, addressing discrepancies in API response codes for enrollment inquiries, and reviewing the progress of various sprint stories. Key discussions included the readiness of ES3 integration for production, the handling of confidential security credentials, and the status of deployment stories awaiting sign-offs from external teams. The team also addressed a job failure, deciding to monitor it for further successful runs before closing the related story, and planned for Q2 sprint activities.
